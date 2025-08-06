@@ -16,5 +16,25 @@ namespace BibliotecaLork
         {
             InitializeComponent();
         }
+
+        private void btnCadastroLivros_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastroAlunos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmprestimoLivro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRelatorioLivros_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
