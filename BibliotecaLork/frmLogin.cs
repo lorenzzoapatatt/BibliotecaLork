@@ -26,17 +26,17 @@ namespace BibliotecaLork
         private bool ValidarLogin(string nome, string senha)
         {
             bool usuarioValido = false;
-            ////conecta ao banco
-            //using (var banco = new ComandaDBContext())
-            //{
-            //    //consultar a tabela usuario select * from usuarios where email = ? and senha = ?
-            //    var usuario = banco
-            //                    .Usuarios
-            //                    .FirstOrDefault(u => u.Email.ToLower() == nome.ToLower() && u.Senha == senha);
+            //conecta ao banco
+            using (var banco = new ComandaDBContext())
+            {
+                //consultar a tabela usuario select * from usuarios where email = ? and senha = ?
+                var usuario = banco
+                                .Usuarios
+                                .FirstOrDefault(u => u.Email.ToLower() == nome.ToLower() && u.Senha == senha);
 
-            //    if (usuario is not null)
-            //        usuarioValido = true;
-            //}
+                if (usuario is not null)
+                    usuarioValido = true;
+            }
 
             //se nome é igual a admin e senha igual a 123
             if (usuarioValido)

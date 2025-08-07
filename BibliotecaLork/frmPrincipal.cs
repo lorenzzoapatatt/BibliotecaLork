@@ -36,5 +36,11 @@ namespace BibliotecaLork
         {
 
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
+        }
     }
 }
