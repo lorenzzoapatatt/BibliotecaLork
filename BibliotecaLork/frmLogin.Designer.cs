@@ -81,6 +81,7 @@
             txtLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtLogin.Size = new Size(448, 45);
             txtLogin.TabIndex = 1;
+            txtLogin.Enter += txtLogin_Enter;
             // 
             // txtSenha
             // 
@@ -107,6 +108,7 @@
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSenha.Size = new Size(448, 45);
             txtSenha.TabIndex = 2;
+            txtSenha.Enter += txtSenha_Enter;
             // 
             // guna2HtmlLabel1
             // 
