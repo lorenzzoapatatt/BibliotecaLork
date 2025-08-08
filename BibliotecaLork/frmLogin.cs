@@ -10,7 +10,7 @@ namespace BibliotecaLork
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //true, false
-            bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
+            bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text, txtTelefone.Text);
             //se true
             if (loginValido)
             {
@@ -23,7 +23,7 @@ namespace BibliotecaLork
             }
         }
 
-        private bool ValidarLogin(string nome, string senha)
+        private bool ValidarLogin(string nome, string senha, string telefone)
         {
             bool usuarioValido = false;
             //conecta ao banco
@@ -56,22 +56,6 @@ namespace BibliotecaLork
         {
             Close();
             Application.Exit();
-        }
-
-        private void txtLogin_Enter(object sender, EventArgs e)
-        {
-            if (txtLogin.Text == "USUÁRIO")
-            {
-                txtLogin.Text = "";
-            }
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            if (txtSenha.Text == "SENHA")
-            {
-                txtSenha.Text = "";
-            }
         }
     }
 }

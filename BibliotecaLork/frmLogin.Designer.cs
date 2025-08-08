@@ -40,6 +40,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtLogin = new Guna.UI2.WinForms.Guna2TextBox();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,8 +49,9 @@
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTelefone = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +72,7 @@
             txtLogin.Font = new Font("Segoe UI", 9F);
             txtLogin.ForeColor = Color.Black;
             txtLogin.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLogin.Location = new Point(344, 184);
+            txtLogin.Location = new Point(344, 120);
             txtLogin.Margin = new Padding(4, 5, 4, 5);
             txtLogin.Name = "txtLogin";
             txtLogin.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
@@ -95,7 +98,7 @@
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.ForeColor = Color.Black;
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(344, 256);
+            txtSenha.Location = new Point(344, 192);
             txtSenha.Margin = new Padding(4, 5, 4, 5);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
@@ -110,7 +113,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(25, 118, 210);
-            guna2HtmlLabel1.Location = new Point(512, 80);
+            guna2HtmlLabel1.Location = new Point(512, 40);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(120, 50);
             guna2HtmlLabel1.TabIndex = 4;
@@ -186,17 +189,6 @@
             guna2Panel1.Size = new Size(325, 505);
             guna2Panel1.TabIndex = 10;
             // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(112, 160);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(101, 50);
-            guna2HtmlLabel2.TabIndex = 11;
-            guna2HtmlLabel2.Text = "Ajuda";
-            // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
@@ -208,12 +200,50 @@
             guna2HtmlLabel3.TabIndex = 12;
             guna2HtmlLabel3.Text = "Sla n sei ta lk";
             // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = Color.White;
+            guna2HtmlLabel2.Location = new Point(112, 160);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(101, 50);
+            guna2HtmlLabel2.TabIndex = 11;
+            guna2HtmlLabel2.Text = "Ajuda";
+            // 
+            // txtTelefone
+            // 
+            txtTelefone.BorderColor = Color.FromArgb(193, 200, 207);
+            txtTelefone.BorderRadius = 5;
+            txtTelefone.BorderThickness = 0;
+            txtTelefone.CustomizableEdges = customizableEdges13;
+            txtTelefone.DefaultText = "";
+            txtTelefone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTelefone.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTelefone.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTelefone.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTelefone.FillColor = Color.FromArgb(224, 224, 224);
+            txtTelefone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTelefone.Font = new Font("Segoe UI", 9F);
+            txtTelefone.ForeColor = Color.Black;
+            txtTelefone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTelefone.Location = new Point(344, 264);
+            txtTelefone.Margin = new Padding(4, 5, 4, 5);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
+            txtTelefone.PlaceholderText = "Bote seu Telefone";
+            txtTelefone.SelectedText = "";
+            txtTelefone.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtTelefone.Size = new Size(448, 45);
+            txtTelefone.TabIndex = 11;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(851, 501);
+            Controls.Add(txtTelefone);
             Controls.Add(guna2Panel1);
             Controls.Add(btnFechar);
             Controls.Add(guna2Button2);
@@ -240,5 +270,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtTelefone;
     }
 }
