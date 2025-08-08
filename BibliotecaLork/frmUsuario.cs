@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BibliotecaLork
 {
-    public partial class frmCadastroAlunos : Form
+    public partial class frmUsuario : Form
     {
-        public frmCadastroAlunos()
+        public frmUsuario()
         {
             InitializeComponent();
         }
