@@ -132,7 +132,6 @@
             btnCadastroUsuario.Size = new Size(192, 32);
             btnCadastroUsuario.TabIndex = 1;
             btnCadastroUsuario.Text = "Cadastro de Usuario";
-            btnCadastroUsuario.Click += btnCadastroUsuario_Click_1;
             // 
             // btnCadastroLivros
             // 

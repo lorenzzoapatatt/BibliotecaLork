@@ -23,6 +23,12 @@ namespace BibliotecaLork
             frmCadastroLivro.ShowDialog();
         }
 
+        private void btnCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            var frmUsuario = new frmUsuario();
+            frmUsuario.ShowDialog();
+        }
+
         private void btnEmprestimoLivro_Click(object sender, EventArgs e)
         {
             var frmEmprestimo = new frmEmprestimo();
@@ -39,12 +45,6 @@ namespace BibliotecaLork
         {
             Close();
             Application.Exit();
-        }
-
-        private void btnCadastroUsuario_Click_1(object sender, EventArgs e)
-        {
-            var frmUsuario = new frmUsuario();
-            frmUsuario.ShowDialog();
         }
     }
 }
