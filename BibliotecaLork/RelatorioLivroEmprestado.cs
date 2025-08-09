@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BibliotecaLork
 {
-    internal class RelatorioLivroEmprestado
+    public class RelatorioLivroEmprestado
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

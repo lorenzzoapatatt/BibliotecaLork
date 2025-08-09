@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaLork
 {
-    internal class EmprestimoLivro
+    public class EmprestimoLivro
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

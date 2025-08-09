@@ -5,12 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using SenacFoods;
 
 #nullable disable
 
 namespace BibliotecaLork.Migrations
 {
-    [DbContext(typeof(ComandaDBContext))]
+    [DbContext(typeof(LivrosDBContext))]
     [Migration("20250806004050_v1")]
     partial class v1
     {

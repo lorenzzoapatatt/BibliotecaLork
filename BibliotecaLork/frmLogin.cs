@@ -1,3 +1,6 @@
+using Guna.UI2.WinForms;
+using SenacFoods;
+
 namespace BibliotecaLork
 {
     public partial class frmLogin : Form
@@ -27,7 +30,7 @@ namespace BibliotecaLork
         {
             bool usuarioValido = false;
             //conecta ao banco
-            using (var banco = new ComandaDBContext())
+            using (var banco = new LivrosDBContext())
             {
                 //consultar a tabela usuario select * from usuarios where email = ? and senha = ?
                 var usuario = banco
@@ -46,8 +49,11 @@ namespace BibliotecaLork
             }
             else
             {
-                //exibe mensagem de erro
-                MessageBox.Show("Login ou senha invalida");
+                var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+                msg.Text = "Login ou senha invalida";
+                msg.Caption = "falha";
+                msg.Icon = MessageDialogIcon.Error;
+                msg.Show();
             }
             // retorna false
             return false;
@@ -56,22 +62,6 @@ namespace BibliotecaLork
         {
             Close();
             Application.Exit();
-        }
-
-        private void txtLogin_Enter(object sender, EventArgs e)
-        {
-            if (txtLogin.Text == "USUÁRIO")
-            {
-                txtLogin.Text = "";
-            }
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            if (txtSenha.Text == "SENHA")
-            {
-                txtSenha.Text = "";
-            }
         }
     }
 }

@@ -38,7 +38,8 @@ namespace BibliotecaLork
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
-            Application.Exit();
+            var frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
         }
 
         private void btnCadastroUsuario_Click(object sender, EventArgs e)
