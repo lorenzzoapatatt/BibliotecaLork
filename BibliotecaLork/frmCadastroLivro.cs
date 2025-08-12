@@ -14,13 +14,13 @@ namespace BibliotecaLork
 {
     public partial class frmCadastroLivro : Form
     {
-        private CadastroLivro? _CadastroLivro;
+        private Livro? _CadastroLivro;
         public frmCadastroLivro()
         {
             InitializeComponent();
         }
 
-        public frmCadastroLivro(CadastroLivro cadastroLivro)
+        public frmCadastroLivro(Livro cadastroLivro)
         {
             _CadastroLivro = cadastroLivro;
             InitializeComponent();
@@ -113,7 +113,7 @@ namespace BibliotecaLork
                 _CadastroLivro.Categoria = categoria;
                 _CadastroLivro.Quantidade = quantidade;
                 _CadastroLivro.Isbn = isbn;
-                banco.CadastroLivros.Update(_CadastroLivro);
+                banco.Livros.Update(_CadastroLivro);
                 banco.SaveChanges();
             }
             MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -131,7 +131,7 @@ namespace BibliotecaLork
                 string quantidade = txtQuantidade.Text;
                 string isbn = txtIsbn.Text;
 
-                var cadastroLivro = new CadastroLivro()
+                var cadastroLivro = new Livro()
                 {
                     Titulo = titulo,
                     Autor = autor,
@@ -139,7 +139,7 @@ namespace BibliotecaLork
                     Quantidade = quantidade,
                     Isbn = isbn
                 };
-                banco.CadastroLivros.Add(cadastroLivro);
+                banco.Livros.Add(cadastroLivro);
                 banco.SaveChanges();
             }
             MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

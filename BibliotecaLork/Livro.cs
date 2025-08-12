@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BibliotecaLork
 {
-    public class CadastroLivro
+    public class Livro
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

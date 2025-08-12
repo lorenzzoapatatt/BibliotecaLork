@@ -21,7 +21,42 @@ namespace BibliotecaLork.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("BibliotecaLork.CadastroLivro", b =>
+            modelBuilder.Entity("BibliotecaLork.EmprestimoLivro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DataDevolucao")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("DataEmprestimo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("LivroId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LivroId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("EmprestimoLivros");
+                });
+
+            modelBuilder.Entity("BibliotecaLork.Livro", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,38 +86,7 @@ namespace BibliotecaLork.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CadastroLivros");
-                });
-
-            modelBuilder.Entity("BibliotecaLork.EmprestimoLivro", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AlunoId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DataDevolucao")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("DataEmprestimo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("LivroId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmprestimoLivros");
+                    b.ToTable("Livros");
                 });
 
             modelBuilder.Entity("BibliotecaLork.RelatorioLivroEmprestado", b =>
@@ -128,6 +132,25 @@ namespace BibliotecaLork.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("BibliotecaLork.EmprestimoLivro", b =>
+                {
+                    b.HasOne("BibliotecaLork.Livro", "Livro")
+                        .WithMany()
+                        .HasForeignKey("LivroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BibliotecaLork.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Livro");
+
+                    b.Navigation("Usuario");
                 });
 #pragma warning restore 612, 618
         }

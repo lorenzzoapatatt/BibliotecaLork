@@ -18,8 +18,20 @@ namespace SenacFoods
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<EmprestimoLivro>()
+                .HasOne(e => e.Usuario)
+                .WithMany()
+                .HasForeignKey(e => e.UsuarioId);
+            modelBuilder.Entity<EmprestimoLivro>()
+                .HasOne(e => e.Livro)
+                .WithMany()
+                .HasForeignKey(e => e.LivroId);
+        }
+
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<CadastroLivro> CadastroLivros { get; set; }
+        public DbSet<Livro> Livros { get; set; }
         public DbSet<EmprestimoLivro> EmprestimoLivros { get; set; }
         public DbSet<RelatorioLivroEmprestado> RelatorioLivroEmprestados { get; set; }
     }

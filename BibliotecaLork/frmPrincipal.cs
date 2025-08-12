@@ -13,7 +13,7 @@ namespace BibliotecaLork
 {
     public partial class frmPrincipal : Form
     {
-        private CadastroLivro? LivroSelecionado;
+        private Livro? LivroSelecionado;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace BibliotecaLork
         {
             using (var bd = new LivrosDBContext())
             {
-                var livros = bd.CadastroLivros.ToList();
+                var livros = bd.Livros.ToList();
                 dgvLivros.DataSource = livros;
             }
         }
@@ -38,7 +38,7 @@ namespace BibliotecaLork
             if (e.RowIndex >= 0)
             {
                 //pegar o usuario selecionado
-                LivroSelecionado = dgvLivros.Rows[e.RowIndex].DataBoundItem as CadastroLivro;
+                LivroSelecionado = dgvLivros.Rows[e.RowIndex].DataBoundItem as Livro;
                 btnEditar.Enabled = true;
             }
         }
@@ -62,6 +62,12 @@ namespace BibliotecaLork
             frmCadastroLivro.ShowDialog();
         }
 
+        private void btnCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            var frmUsuario = new frmUsuario();
+            frmUsuario.ShowDialog();
+        }
+
         private void btnEmprestimoLivro_Click(object sender, EventArgs e)
         {
             var frmEmprestimo = new frmEmprestimo();
@@ -79,11 +85,6 @@ namespace BibliotecaLork
             Close();
             var frmLogin = new frmLogin();
             frmLogin.ShowDialog();
-        }
-
-        private void btnCadastroUsuario_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmPrincipal_Activated(object sender, EventArgs e)

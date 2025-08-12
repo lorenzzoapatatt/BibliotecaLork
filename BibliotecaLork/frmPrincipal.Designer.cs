@@ -186,6 +186,8 @@
             // 
             // dgvLivros
             // 
+            dgvLivros.AllowUserToAddRows = false;
+            dgvLivros.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvLivros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -209,6 +211,7 @@
             dgvLivros.GridColor = Color.FromArgb(231, 229, 255);
             dgvLivros.Location = new Point(256, 72);
             dgvLivros.Name = "dgvLivros";
+            dgvLivros.ReadOnly = true;
             dgvLivros.RowHeadersVisible = false;
             dgvLivros.RowHeadersWidth = 62;
             dgvLivros.Size = new Size(520, 304);
@@ -226,7 +229,7 @@
             dgvLivros.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvLivros.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvLivros.ThemeStyle.HeaderStyle.Height = 4;
-            dgvLivros.ThemeStyle.ReadOnly = false;
+            dgvLivros.ThemeStyle.ReadOnly = true;
             dgvLivros.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvLivros.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvLivros.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
