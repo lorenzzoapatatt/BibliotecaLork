@@ -50,47 +50,38 @@ namespace BibliotecaLork
         private bool ValidarForm()
         {
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Text = "Login ou senha invalida";
-            msg.Caption = "falha";
             msg.Icon = MessageDialogIcon.Error;
-            msg.Show();
 
             if (txtEmail.Text == "")
             {
-                MessageBox.Show("O campo email é obrigatório");
-                txtEmail.Focus();
+                msg.Show("O campo email é obrigatório");
                 return false;
             }
             else if (txtUsuario.Text == "")
             {
-                MessageBox.Show("O campo usuario é obrigatório");
-                txtEmail.Focus();
+                msg.Show("O campo usuario é obrigatório");
                 return false;
             }
             else if (txtSenha.Text == "")
             {
-                MessageBox.Show("O campo senha é obrigatório");
-                txtSenha.Focus();
+                msg.Show("O campo senha é obrigatório");
                 return false;
             }
             else if (txtConfirmarSenha.Text == "")
             {
-                MessageBox.Show("O campo senha é obrigatório");
-                txtConfirmarSenha.Focus();
+                msg.Show("O campo senha é obrigatório");
                 return false;
             }
 
             if (txtSenha.Text != txtConfirmarSenha.Text)
             {
-                MessageBox.Show("As senhas não conferem");
-                txtSenha.Focus();
+                msg.Show("As senhas não conferem");
                 return false;
             }
 
             if (txtSenha.Text.Length < 6)
             {
-                MessageBox.Show("A senha deve ter no mínimo 6 caracteres");
-                txtSenha.Focus();
+                msg.Show("A senha deve ter no mínimo 6 caracteres");
                 return false;
             }
 

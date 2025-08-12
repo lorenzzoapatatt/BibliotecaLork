@@ -30,27 +30,21 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioCad));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioCad));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gbFormulario = new Guna.UI2.WinForms.Guna2GroupBox();
             txtConfirmarSenha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,61 +53,16 @@
             txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
-            guna2Panel1.SuspendLayout();
             gbFormulario.SuspendLayout();
             SuspendLayout();
             // 
-            // btnFechar
-            // 
-            btnFechar.BackColor = Color.FromArgb(255, 224, 192);
-            btnFechar.CustomizableEdges = customizableEdges1;
-            btnFechar.DisabledState.BorderColor = Color.DarkGray;
-            btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFechar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFechar.FillColor = Color.WhiteSmoke;
-            btnFechar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFechar.ForeColor = Color.FromArgb(25, 118, 210);
-            btnFechar.Location = new Point(896, 8);
-            btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnFechar.Size = new Size(35, 34);
-            btnFechar.TabIndex = 14;
-            btnFechar.Text = "X";
-            // 
-            // txtPesquisar
-            // 
-            txtPesquisar.BackColor = Color.FromArgb(25, 118, 210);
-            txtPesquisar.BorderColor = Color.WhiteSmoke;
-            txtPesquisar.BorderRadius = 10;
-            txtPesquisar.CustomizableEdges = customizableEdges3;
-            txtPesquisar.DefaultText = "";
-            txtPesquisar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPesquisar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPesquisar.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPesquisar.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPesquisar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPesquisar.Font = new Font("Segoe UI", 9F);
-            txtPesquisar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPesquisar.IconLeft = (Image)resources.GetObject("txtPesquisar.IconLeft");
-            txtPesquisar.Location = new Point(16, 24);
-            txtPesquisar.Margin = new Padding(4, 5, 4, 5);
-            txtPesquisar.Name = "txtPesquisar";
-            txtPesquisar.PlaceholderText = "";
-            txtPesquisar.SelectedText = "";
-            txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtPesquisar.Size = new Size(208, 32);
-            txtPesquisar.TabIndex = 12;
-            // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(btnFechar);
-            guna2Panel1.Controls.Add(txtPesquisar);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 14;
             // 
@@ -125,12 +74,12 @@
             gbFormulario.Controls.Add(txtUsuario);
             gbFormulario.Controls.Add(btnExcluir);
             gbFormulario.Controls.Add(btnSalvar);
-            gbFormulario.CustomizableEdges = customizableEdges19;
+            gbFormulario.CustomizableEdges = customizableEdges15;
             gbFormulario.Font = new Font("Segoe UI", 9F);
             gbFormulario.ForeColor = Color.FromArgb(125, 137, 149);
             gbFormulario.Location = new Point(32, 96);
             gbFormulario.Name = "gbFormulario";
-            gbFormulario.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gbFormulario.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gbFormulario.Size = new Size(880, 368);
             gbFormulario.TabIndex = 15;
             gbFormulario.Text = "Formulário";
@@ -141,7 +90,7 @@
             txtConfirmarSenha.BorderColor = Color.FromArgb(193, 200, 207);
             txtConfirmarSenha.BorderRadius = 5;
             txtConfirmarSenha.BorderThickness = 0;
-            txtConfirmarSenha.CustomizableEdges = customizableEdges7;
+            txtConfirmarSenha.CustomizableEdges = customizableEdges3;
             txtConfirmarSenha.DefaultText = "";
             txtConfirmarSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmarSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -158,7 +107,7 @@
             txtConfirmarSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtConfirmarSenha.PlaceholderText = "Confirmar Senha";
             txtConfirmarSenha.SelectedText = "";
-            txtConfirmarSenha.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtConfirmarSenha.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtConfirmarSenha.Size = new Size(448, 45);
             txtConfirmarSenha.TabIndex = 7;
             // 
@@ -168,7 +117,7 @@
             txtSenha.BorderColor = Color.FromArgb(193, 200, 207);
             txtSenha.BorderRadius = 5;
             txtSenha.BorderThickness = 0;
-            txtSenha.CustomizableEdges = customizableEdges9;
+            txtSenha.CustomizableEdges = customizableEdges5;
             txtSenha.DefaultText = "";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -185,7 +134,7 @@
             txtSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtSenha.PlaceholderText = "Bote sua Senha";
             txtSenha.SelectedText = "";
-            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSenha.Size = new Size(448, 45);
             txtSenha.TabIndex = 6;
             // 
@@ -195,7 +144,7 @@
             txtEmail.BorderColor = Color.FromArgb(193, 200, 207);
             txtEmail.BorderRadius = 5;
             txtEmail.BorderThickness = 0;
-            txtEmail.CustomizableEdges = customizableEdges11;
+            txtEmail.CustomizableEdges = customizableEdges7;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -212,7 +161,7 @@
             txtEmail.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtEmail.PlaceholderText = "Bote seu email";
             txtEmail.SelectedText = "";
-            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtEmail.Size = new Size(448, 45);
             txtEmail.TabIndex = 5;
             // 
@@ -222,7 +171,7 @@
             txtUsuario.BorderColor = Color.FromArgb(193, 200, 207);
             txtUsuario.BorderRadius = 5;
             txtUsuario.BorderThickness = 0;
-            txtUsuario.CustomizableEdges = customizableEdges13;
+            txtUsuario.CustomizableEdges = customizableEdges9;
             txtUsuario.DefaultText = "";
             txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -239,7 +188,7 @@
             txtUsuario.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtUsuario.PlaceholderText = "Nome do Usuário";
             txtUsuario.SelectedText = "";
-            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtUsuario.Size = new Size(448, 45);
             txtUsuario.TabIndex = 4;
             // 
@@ -248,7 +197,7 @@
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges15;
+            btnExcluir.CustomizableEdges = customizableEdges11;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -258,7 +207,7 @@
             btnExcluir.ForeColor = Color.White;
             btnExcluir.Location = new Point(768, 328);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Cancelar";
@@ -269,7 +218,7 @@
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
-            btnSalvar.CustomizableEdges = customizableEdges17;
+            btnSalvar.CustomizableEdges = customizableEdges13;
             btnSalvar.DisabledState.BorderColor = Color.DarkGray;
             btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -279,7 +228,7 @@
             btnSalvar.ForeColor = Color.White;
             btnSalvar.Location = new Point(656, 328);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnSalvar.Size = new Size(104, 32);
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
@@ -292,18 +241,13 @@
             ClientSize = new Size(944, 496);
             Controls.Add(gbFormulario);
             Controls.Add(guna2Panel1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "frmUsuarioCad";
             Text = "frmUsuarioCad";
-            guna2Panel1.ResumeLayout(false);
             gbFormulario.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button btnFechar;
-        private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GroupBox gbFormulario;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;

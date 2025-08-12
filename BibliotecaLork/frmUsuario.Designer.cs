@@ -31,25 +31,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
             gbUsuario = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvUsuario = new Guna.UI2.WinForms.Guna2DataGridView();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
@@ -86,34 +83,14 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(btnFechar);
             guna2Panel1.Controls.Add(txtPesquisar);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 13;
-            // 
-            // btnFechar
-            // 
-            btnFechar.BackColor = Color.FromArgb(255, 224, 192);
-            btnFechar.CustomizableEdges = customizableEdges3;
-            btnFechar.DisabledState.BorderColor = Color.DarkGray;
-            btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFechar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFechar.FillColor = Color.WhiteSmoke;
-            btnFechar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFechar.ForeColor = Color.FromArgb(25, 118, 210);
-            btnFechar.Location = new Point(896, 8);
-            btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnFechar.Size = new Size(35, 34);
-            btnFechar.TabIndex = 14;
-            btnFechar.Text = "X";
-            btnFechar.Click += btnFechar_Click;
             // 
             // gbUsuario
             // 
@@ -121,12 +98,12 @@
             gbUsuario.Controls.Add(btnExcluir);
             gbUsuario.Controls.Add(btnEditar);
             gbUsuario.Controls.Add(btnSalvar);
-            gbUsuario.CustomizableEdges = customizableEdges13;
+            gbUsuario.CustomizableEdges = customizableEdges11;
             gbUsuario.Font = new Font("Segoe UI", 9F);
             gbUsuario.ForeColor = Color.FromArgb(125, 137, 149);
             gbUsuario.Location = new Point(32, 104);
             gbUsuario.Name = "gbUsuario";
-            gbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gbUsuario.Size = new Size(880, 368);
             gbUsuario.TabIndex = 14;
             gbUsuario.Text = "Usuarios";
@@ -196,7 +173,7 @@
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges7;
+            btnExcluir.CustomizableEdges = customizableEdges5;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -206,7 +183,7 @@
             btnExcluir.ForeColor = Color.White;
             btnExcluir.Location = new Point(768, 328);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
@@ -217,7 +194,7 @@
             btnEditar.BackColor = Color.White;
             btnEditar.BorderRadius = 10;
             btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
-            btnEditar.CustomizableEdges = customizableEdges9;
+            btnEditar.CustomizableEdges = customizableEdges7;
             btnEditar.DisabledState.BorderColor = Color.DarkGray;
             btnEditar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -227,7 +204,7 @@
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(656, 328);
             btnEditar.Name = "btnEditar";
-            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEditar.Size = new Size(104, 32);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
@@ -238,7 +215,7 @@
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
-            btnSalvar.CustomizableEdges = customizableEdges11;
+            btnSalvar.CustomizableEdges = customizableEdges9;
             btnSalvar.DisabledState.BorderColor = Color.DarkGray;
             btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -248,7 +225,7 @@
             btnSalvar.ForeColor = Color.White;
             btnSalvar.Location = new Point(544, 328);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnSalvar.Size = new Size(104, 32);
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
@@ -261,7 +238,6 @@
             ClientSize = new Size(944, 506);
             Controls.Add(gbUsuario);
             Controls.Add(guna2Panel1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "frmUsuario";
             Text = "frmUsuario";
             Load += frmUsuario_Load;
@@ -275,7 +251,6 @@
 
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnFechar;
         private Guna.UI2.WinForms.Guna2GroupBox gbUsuario;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnEditar;

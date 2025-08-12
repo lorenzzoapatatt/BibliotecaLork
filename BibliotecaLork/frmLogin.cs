@@ -58,9 +58,9 @@ namespace BibliotecaLork
             // retorna false
             return false;
         }
-        private void btnFechar_Click(object sender, EventArgs e)
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Close();
             Application.Exit();
         }
     }
