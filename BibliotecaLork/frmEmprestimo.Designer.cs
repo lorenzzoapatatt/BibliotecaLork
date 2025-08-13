@@ -34,6 +34,10 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimo));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,6 +50,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gbEmprestimos = new Guna.UI2.WinForms.Guna2GroupBox();
+            dgvEmprestimos = new Guna.UI2.WinForms.Guna2DataGridView();
             dgvEmprestimo = new Guna.UI2.WinForms.Guna2DataGridView();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
@@ -53,12 +58,14 @@
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             gbEmprestimos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // gbEmprestimos
             // 
+            gbEmprestimos.Controls.Add(dgvEmprestimos);
             gbEmprestimos.Controls.Add(dgvEmprestimo);
             gbEmprestimos.Controls.Add(btnExcluir);
             gbEmprestimos.Controls.Add(btnEditar);
@@ -73,10 +80,10 @@
             gbEmprestimos.TabIndex = 17;
             gbEmprestimos.Text = "Emprestimos";
             // 
-            // dgvEmprestimo
+            // dgvEmprestimos
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            dgvEmprestimo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvEmprestimos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -84,9 +91,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvEmprestimo.ColumnHeadersHeight = 4;
-            dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEmprestimos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvEmprestimos.ColumnHeadersHeight = 4;
+            dgvEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -94,10 +101,10 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvEmprestimo.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvEmprestimo.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEmprestimo.Location = new Point(24, 64);
-            dgvEmprestimo.Name = "dgvEmprestimo";
+            dgvEmprestimos.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvEmprestimos.GridColor = Color.FromArgb(231, 229, 255);
+            dgvEmprestimos.Location = new Point(24, 60);
+            dgvEmprestimos.Name = "dgvEmprestimos";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -105,7 +112,66 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvEmprestimo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvEmprestimos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvEmprestimos.RowHeadersVisible = false;
+            dgvEmprestimos.RowHeadersWidth = 62;
+            dgvEmprestimos.Size = new Size(832, 248);
+            dgvEmprestimos.TabIndex = 5;
+            dgvEmprestimos.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvEmprestimos.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvEmprestimos.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvEmprestimos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvEmprestimos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvEmprestimos.ThemeStyle.BackColor = Color.White;
+            dgvEmprestimos.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvEmprestimos.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvEmprestimos.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvEmprestimos.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvEmprestimos.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvEmprestimos.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEmprestimos.ThemeStyle.HeaderStyle.Height = 4;
+            dgvEmprestimos.ThemeStyle.ReadOnly = false;
+            dgvEmprestimos.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvEmprestimos.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvEmprestimos.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvEmprestimos.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
+            dgvEmprestimos.ThemeStyle.RowsStyle.Height = 33;
+            dgvEmprestimos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvEmprestimos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // dgvEmprestimo
+            // 
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dgvEmprestimo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvEmprestimo.ColumnHeadersHeight = 4;
+            dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(125, 137, 149);
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dgvEmprestimo.DefaultCellStyle = dataGridViewCellStyle7;
+            dgvEmprestimo.GridColor = Color.FromArgb(231, 229, 255);
+            dgvEmprestimo.Location = new Point(24, 64);
+            dgvEmprestimo.Name = "dgvEmprestimo";
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Control;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvEmprestimo.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvEmprestimo.RowHeadersVisible = false;
             dgvEmprestimo.RowHeadersWidth = 62;
             dgvEmprestimo.Size = new Size(832, 248);
@@ -151,6 +217,7 @@
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnEditar
             // 
@@ -171,6 +238,7 @@
             btnEditar.Size = new Size(104, 32);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnSalvar
             // 
@@ -237,7 +305,9 @@
             Controls.Add(guna2Panel1);
             Name = "frmEmprestimo";
             Text = "frmEmprestimo";
+            Load += frmEmprestimo_Load;
             gbEmprestimos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
             guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -252,5 +322,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvEmprestimos;
     }
 }

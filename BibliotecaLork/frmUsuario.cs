@@ -23,12 +23,9 @@ namespace BibliotecaLork
 
         private void BuscarUsuario()
         {
-            // conectar no banco de dados
             using (var bd = new LivrosDBContext())
             {
-                // consultar a tabela usuario
                 var usuarios = bd.Usuarios.ToList();
-                // popular o grid com a tabela consultada
                 dgvUsuario.DataSource = usuarios;
             }
         }
