@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using SenacFoods;
 
 namespace BibliotecaLork
 {
@@ -92,6 +91,9 @@ namespace BibliotecaLork
 
         private void AtualizarUsuario()
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Information;
+
             using (var banco = new LivrosDBContext())
             {
                 string nome = txtUsuario.Text;
@@ -103,12 +105,15 @@ namespace BibliotecaLork
                 banco.Usuarios.Update(_usuario);
                 banco.SaveChanges();
             }
-            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            msg.Show("Cardápio salvo com sucesso!");
             this.Close();
         }
 
         private void InserirUsuario()
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Information;
+
             using (var banco = new LivrosDBContext())
             {
                 string nome = txtUsuario.Text;
@@ -127,7 +132,7 @@ namespace BibliotecaLork
                 banco.SaveChanges();
             }
 
-            MessageBox.Show("Usuário salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            msg.Show("Usuário salvo com sucesso!");
             this.Close();
         }
 

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using Microsoft.EntityFrameworkCore;
-using SenacFoods;
 
 namespace BibliotecaLork
 {
@@ -37,14 +36,6 @@ namespace BibliotecaLork
                 txtDataEmprestimo.Text = _emprestimoLivro.DataEmprestimo;
                 txtStatus.Text = _emprestimoLivro.Status;
             }
-        }
-
-        private void SalvarForm()
-        {
-            if (_emprestimoLivro != null)
-                AtualizarEmprestimo();
-            else
-                InserirUsuario();
         }
 
         private void SalvarForm()
@@ -91,7 +82,7 @@ namespace BibliotecaLork
                 _emprestimoLivro.DataDevolucao = dataDevolucao;
                 _emprestimoLivro.DataEmprestimo = dataEmprestimo;
                 _emprestimoLivro.Status = status;
-                banco.Usuarios.Update(_emprestimoLivro);
+                banco.EmprestimoLivros.Update(_emprestimoLivro);
                 banco.SaveChanges();
             }
             MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -113,7 +104,7 @@ namespace BibliotecaLork
                     Status = status
                 };
 
-                banco.Usuarios.Add(emprestimoLivro);
+                banco.EmprestimoLivros.Add(emprestimoLivro);
                 banco.SaveChanges();
             }
 

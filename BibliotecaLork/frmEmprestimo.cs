@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SenacFoods;
 
 namespace BibliotecaLork
 {
@@ -32,8 +31,8 @@ namespace BibliotecaLork
         {
             if (emprestimoLivroSelecionado != null)
             {
-                var usuarioEditar = new frmUsuarioCad(emprestimoLivroSelecionado);
-                usuarioEditar.Show();
+                var emprestimoEditar = new frmEmprestimoCad(emprestimoLivroSelecionado);
+                emprestimoEditar.Show();
             }
             BuscarEmprestimo();
             emprestimoLivroSelecionado = null;
@@ -52,7 +51,7 @@ namespace BibliotecaLork
             {
                 using (var bancoDeDados = new LivrosDBContext())
                 {
-                    bancoDeDados.Usuarios.Remove(emprestimoLivroSelecionado);
+                    bancoDeDados.EmprestimoLivros.Remove(emprestimoLivroSelecionado);
                     bancoDeDados.SaveChanges();
                 }
                 MessageBox.Show("Cardápio excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

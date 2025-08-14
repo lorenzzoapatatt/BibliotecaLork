@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using SenacFoods;
-
 namespace BibliotecaLork
 {
     public partial class frmCadastroLivro : Form
@@ -101,6 +99,9 @@ namespace BibliotecaLork
 
         private void AtualizarCadLivro()
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
             using (var banco = new LivrosDBContext())
             {
                 string titulo = txtTitulo.Text;
@@ -116,13 +117,16 @@ namespace BibliotecaLork
                 banco.Livros.Update(_CadastroLivro);
                 banco.SaveChanges();
             }
-            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            msg.Show("Cardápio salvo com sucesso!");
             this.Close();
         }
 
 
         private void InserirCadLivro()
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
             using (var banco = new LivrosDBContext())
             {
                 string titulo = txtTitulo.Text;
@@ -142,7 +146,7 @@ namespace BibliotecaLork
                 banco.Livros.Add(cadastroLivro);
                 banco.SaveChanges();
             }
-            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            msg.Show("Cardápio salvo com sucesso!");
             this.Close();
         }
     }
