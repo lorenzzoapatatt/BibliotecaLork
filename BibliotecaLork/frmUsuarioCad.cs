@@ -94,7 +94,7 @@ namespace BibliotecaLork
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
             msg.Icon = MessageDialogIcon.Information;
 
-            using (var banco = new LivrosDBContext())
+            using (var bd = new LivrosDBContext())
             {
                 string nome = txtUsuario.Text;
                 string email = txtEmail.Text;
@@ -102,8 +102,8 @@ namespace BibliotecaLork
                 _usuario.Nome = nome;
                 _usuario.Email = email;
                 _usuario.Senha = senha;
-                banco.Usuarios.Update(_usuario);
-                banco.SaveChanges();
+                bd.Usuarios.Update(_usuario);
+                bd.SaveChanges();
             }
             msg.Show("Cardápio salvo com sucesso!");
             this.Close();
@@ -114,7 +114,7 @@ namespace BibliotecaLork
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
             msg.Icon = MessageDialogIcon.Information;
 
-            using (var banco = new LivrosDBContext())
+            using (var bd = new LivrosDBContext())
             {
                 string nome = txtUsuario.Text;
                 string email = txtEmail.Text;
@@ -128,8 +128,8 @@ namespace BibliotecaLork
                     Ativo = true
                 };
 
-                banco.Usuarios.Add(usu);
-                banco.SaveChanges();
+                bd.Usuarios.Add(usu);
+                bd.SaveChanges();
             }
 
             msg.Show("Usuário salvo com sucesso!");

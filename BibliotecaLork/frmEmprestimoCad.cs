@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using Microsoft.EntityFrameworkCore;
@@ -15,102 +9,17 @@ namespace BibliotecaLork
     public partial class frmEmprestimoCad : Form
     {
         private EmprestimoLivro? _emprestimoLivro;
-        public frmEmprestimoCad()
-        {
-            InitializeComponent();
-        }
-
         public frmEmprestimoCad(EmprestimoLivro emprestimoLivro)
         {
             _emprestimoLivro = emprestimoLivro;
             InitializeComponent();
-
-            CarregarDadosDaTela();
         }
-
-        private void CarregarDadosDaTela()
+        private void frmEmprestimoCad_Load(object sender, EventArgs e)
         {
-            if (_emprestimoLivro != null)
-            {
-                txtDataDevolucao.Text = _emprestimoLivro.DataDevolucao;
-                txtDataEmprestimo.Text = _emprestimoLivro.DataEmprestimo;
-                txtStatus.Text = _emprestimoLivro.Status;
-            }
+            BuscarUsuarios();
+            BuscarLivros();
         }
 
-        private void SalvarForm()
-        {
-            if (_emprestimoLivro != null)
-                AtualizarEmprestimo();
-            else
-                InserirUsuario();
-        }
-
-        private bool ValidarForm()
-        {
-            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Error;
-
-            if (txtDataDevolucao.Text == "")
-            {
-                msg.Show("O campo email é obrigatório");
-                return false;
-            }
-            else if (txtDataEmprestimo.Text == "")
-            {
-                msg.Show("O campo usuario é obrigatório");
-                return false;
-            }
-            else if (txtStatus.Text == "")
-            {
-                msg.Show("O campo senha é obrigatório");
-                return false;
-            }
-
-
-
-            return true;
-        }
-
-        private void AtualizarEmprestimo()
-        {
-            using (var banco = new LivrosDBContext())
-            {
-                string dataDevolucao = txtDataDevolucao.Text;
-                string dataEmprestimo = txtDataEmprestimo.Text;
-                string status = txtStatus.Text;
-                _emprestimoLivro.DataDevolucao = dataDevolucao;
-                _emprestimoLivro.DataEmprestimo = dataEmprestimo;
-                _emprestimoLivro.Status = status;
-                banco.EmprestimoLivros.Update(_emprestimoLivro);
-                banco.SaveChanges();
-            }
-            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-
-        private void InserirUsuario()
-        {
-            using (var banco = new LivrosDBContext())
-            {
-                string dataDevolucao = txtDataDevolucao.Text;
-                string dataEmprestimo = txtDataEmprestimo.Text;
-                string status = txtStatus.Text;
-
-                var emprestimoLivro = new EmprestimoLivro()
-                {
-                    DataDevolucao = dataDevolucao,
-                    DataEmprestimo = dataEmprestimo,
-                    Status = status
-                };
-
-                banco.EmprestimoLivros.Add(emprestimoLivro);
-                banco.SaveChanges();
-            }
-
-            MessageBox.Show("Usuário salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (ValidarForm())
@@ -120,6 +29,113 @@ namespace BibliotecaLork
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public frmEmprestimoCad()
+        {
+            InitializeComponent();
+        }
+        private void SalvarForm()
+        {
+            if (_emprestimoLivro != null)
+                AtualizarEmprestimo();
+            else
+                InserirEmprestimo();
+        }
+
+        private bool ValidarForm()
+        {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
+            if (txtDataEmprestimo.Text == "")
+            {
+                msg.Show("O campo Data de Empréstimo é obrigatório.");
+                return false;
+            }
+            if (txtDataDevolucao.Text == "")
+            {
+                msg.Show("O campo Data de Devolução é obrigatório.");
+                return false;
+            }
+            if (txtStatus.Text == "")
+            {
+                msg.Show("O campo Status é obrigatório.");
+                return false;
+            }
+            if (cbUsuario.SelectedValue == null)
+            {
+                msg.Show("Selecione um Usuário.");
+                return false;
+            }
+            if (cbLivro.SelectedValue == null)
+            {
+                msg.Show("Selecione um Livro.");
+                return false;
+            }
+
+            return true;
+        }
+        private void InserirEmprestimo()
+        {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Information;
+
+            using (var bd = new LivrosDBContext())
+            {
+                var emprestimoLivro = new EmprestimoLivro
+                {
+                    DataEmprestimo = txtDataEmprestimo.Text,
+                    DataDevolucao = txtDataDevolucao.Text,
+                    Status = txtStatus.Text,
+                    UsuarioId = (int)cbUsuario.SelectedValue,
+                    LivroId = (int)cbLivro.SelectedValue
+                };
+
+                bd.EmprestimoLivros.Add(emprestimoLivro);
+                bd.SaveChanges();
+            }
+            msg.Show("Empréstimo salvo com sucesso!");
+            this.Close();
+        }
+
+        private void AtualizarEmprestimo()
+        {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Information;
+
+            using (var bd = new LivrosDBContext())
+            {
+                var entidade = bd.EmprestimoLivros.FirstOrDefault(e => e.Id == _emprestimoLivro!.Id);
+                entidade.DataEmprestimo = txtDataEmprestimo.Text;
+                entidade.DataDevolucao = txtDataDevolucao.Text;
+                entidade.Status = txtStatus.Text;
+                bd.EmprestimoLivros.Update(entidade);
+                bd.SaveChanges();
+            }
+            msg.Show("Empréstimo atualizado com sucesso!");
+            this.Close();
+        }
+        private void BuscarUsuarios()
+        {
+            using (var bd = new LivrosDBContext())
+            {
+                var usuarios = bd.Usuarios.ToList();
+                cbUsuario.DataSource = usuarios;
+                cbUsuario.DisplayMember = "Nome";
+                cbUsuario.ValueMember = "Id";
+            }
+        }
+
+        private void BuscarLivros()
+        {
+            using (var bd = new LivrosDBContext())
+            {
+                var livros = bd.Livros.ToList();
+                cbLivro.DataSource = livros;
+                cbLivro.DisplayMember = "Titulo";
+                cbLivro.ValueMember = "Id";
+            }
         }
     }
 }

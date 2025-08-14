@@ -265,7 +265,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.White;
+            btnExcluir.BackColor = Color.WhiteSmoke;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
             btnExcluir.CustomizableEdges = customizableEdges15;
@@ -275,7 +275,7 @@
             btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnExcluir.FillColor = Color.FromArgb(211, 47, 47);
             btnExcluir.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.ForeColor = Color.White;
+            btnExcluir.ForeColor = Color.WhiteSmoke;
             btnExcluir.Location = new Point(672, 384);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges16;

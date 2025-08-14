@@ -59,7 +59,6 @@ namespace BibliotecaLork
         {
             if (e.RowIndex >= 0)
             {
-                //pegar o usuario selecionado
                 LivroSelecionado = dgvLivros.Rows[e.RowIndex].DataBoundItem as Livro;
                 btnEditar.Enabled = true;
             }
