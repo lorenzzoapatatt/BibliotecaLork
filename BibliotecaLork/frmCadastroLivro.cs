@@ -100,7 +100,7 @@ namespace BibliotecaLork
         private void AtualizarCadLivro()
         {
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Error;
+            msg.Icon = MessageDialogIcon.Information;
 
             using (var banco = new LivrosDBContext())
             {
@@ -125,7 +125,7 @@ namespace BibliotecaLork
         private void InserirCadLivro()
         {
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Error;
+            msg.Icon = MessageDialogIcon.Information;
 
             using (var banco = new LivrosDBContext())
             {

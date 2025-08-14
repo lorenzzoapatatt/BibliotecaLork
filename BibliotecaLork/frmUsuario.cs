@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace BibliotecaLork
 {
@@ -31,13 +33,20 @@ namespace BibliotecaLork
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
             if (usuarioSelecionado != null)
             {
                 var usuarioEditar = new frmUsuarioCad(usuarioSelecionado);
                 usuarioEditar.Show();
+                BuscarUsuario();
+                usuarioSelecionado = null;
             }
-            BuscarUsuario();
-            usuarioSelecionado = null;
+            else
+            {
+                msg.Show("Selecione um cardápio para editar.");
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -48,6 +57,9 @@ namespace BibliotecaLork
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
             if (usuarioSelecionado != null)
             {
                 using (var bancoDeDados = new LivrosDBContext())
@@ -55,13 +67,13 @@ namespace BibliotecaLork
                     bancoDeDados.Usuarios.Remove(usuarioSelecionado);
                     bancoDeDados.SaveChanges();
                 }
-                MessageBox.Show("Cardápio excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                msg.Show("Cardápio excluído com sucesso!");
                 BuscarUsuario();
                 usuarioSelecionado = null;
             }
             else
             {
-                MessageBox.Show("Selecione um cardápio para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                msg.Show("Selecione um cardápio para excluir.");
             }
         }
 

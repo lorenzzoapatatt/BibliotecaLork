@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace BibliotecaLork
 {
@@ -32,6 +33,28 @@ namespace BibliotecaLork
             }
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
+            if (LivroSelecionado != null)
+            {
+                using (var bancoDeDados = new LivrosDBContext())
+                {
+                    bancoDeDados.Livros.Remove(LivroSelecionado);
+                    bancoDeDados.SaveChanges();
+                }
+                msg.Show("Cardápio excluído com sucesso!");
+                BuscarLivro();
+                LivroSelecionado = null;
+            }
+            else
+            {
+                msg.Show("Selecione um cardápio para excluir.");
+            }
+        }
+
         private void dgvLivros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -44,15 +67,22 @@ namespace BibliotecaLork
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Error;
+
             if (LivroSelecionado != null)
             {
                 //abrir o formulario de edição
                 var livroEditar = new frmCadastroLivro(LivroSelecionado);
                 livroEditar.Show();
+                //atualizar a lista de cardapios
+                BuscarLivro();
+                LivroSelecionado = null;
             }
-            //atualizar a lista de cardapios
-            BuscarLivro();
-            LivroSelecionado = null;
+            else
+            {
+                msg.Show("Selecione um cardápio para editar.");
+            }
         }
 
         private void btnCadastroLivros_Click(object sender, EventArgs e)
@@ -96,5 +126,7 @@ namespace BibliotecaLork
             var frmLogin = new frmLogin();
             frmLogin.Show();
         }
+
+        
     }
 }

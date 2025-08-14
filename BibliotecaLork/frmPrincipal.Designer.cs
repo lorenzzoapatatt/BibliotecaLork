@@ -46,6 +46,8 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gbPrincipal = new Guna.UI2.WinForms.Guna2GroupBox();
             btnRelatorioLivros = new Guna.UI2.WinForms.Guna2Button();
             btnEmprestimoLivro = new Guna.UI2.WinForms.Guna2Button();
@@ -54,6 +56,7 @@
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             dgvLivros = new Guna.UI2.WinForms.Guna2DataGridView();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             gbPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLivros).BeginInit();
             SuspendLayout();
@@ -252,7 +255,7 @@
             btnEditar.FillColor = Color.FromArgb(251, 192, 45);
             btnEditar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(664, 384);
+            btnEditar.Location = new Point(560, 384);
             btnEditar.Name = "btnEditar";
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnEditar.Size = new Size(104, 32);
@@ -260,12 +263,34 @@
             btnEditar.Text = "Editar";
             btnEditar.Click += btnEditar_Click;
             // 
+            // btnExcluir
+            // 
+            btnExcluir.BackColor = Color.White;
+            btnExcluir.BorderRadius = 10;
+            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
+            btnExcluir.CustomizableEdges = customizableEdges15;
+            btnExcluir.DisabledState.BorderColor = Color.DarkGray;
+            btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExcluir.FillColor = Color.FromArgb(211, 47, 47);
+            btnExcluir.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcluir.ForeColor = Color.White;
+            btnExcluir.Location = new Point(672, 384);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnExcluir.Size = new Size(104, 32);
+            btnExcluir.TabIndex = 14;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.Click += btnExcluir_Click;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
             Controls.Add(dgvLivros);
             Controls.Add(txtPesquisar);
@@ -289,5 +314,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvLivros;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2Button btnExcluir;
     }
 }
