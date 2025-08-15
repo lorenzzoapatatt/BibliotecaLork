@@ -15,5 +15,6 @@ namespace BibliotecaLork
 
         public int Id { get; set; }
         public string LivroId { get; set; }
+        public virtual Livro Livro { get; set; }
     }
 }

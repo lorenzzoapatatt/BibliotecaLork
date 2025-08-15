@@ -36,7 +36,7 @@ namespace BibliotecaLork
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Error;
+            msg.Icon = MessageDialogIcon.Information;
 
             if (LivroSelecionado != null)
             {
@@ -67,7 +67,7 @@ namespace BibliotecaLork
         private void btnEditar_Click(object sender, EventArgs e)
         {
             var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Error;
+            msg.Icon = MessageDialogIcon.Information;
 
             if (LivroSelecionado != null)
             {

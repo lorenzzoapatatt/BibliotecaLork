@@ -33,8 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioLivro));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -43,18 +43,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
-            gbEmprestimos = new Guna.UI2.WinForms.Guna2GroupBox();
-            dgvEmprestimo = new Guna.UI2.WinForms.Guna2DataGridView();
+            gbRelatorioLivro = new Guna.UI2.WinForms.Guna2GroupBox();
+            dgvRelatorioLivro = new Guna.UI2.WinForms.Guna2DataGridView();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
-            btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
-            gbEmprestimos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
+            gbRelatorioLivro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -92,26 +89,25 @@
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
             // 
-            // gbEmprestimos
+            // gbRelatorioLivro
             // 
-            gbEmprestimos.Controls.Add(dgvEmprestimo);
-            gbEmprestimos.Controls.Add(btnExcluir);
-            gbEmprestimos.Controls.Add(btnEditar);
-            gbEmprestimos.Controls.Add(btnSalvar);
-            gbEmprestimos.CustomizableEdges = customizableEdges11;
-            gbEmprestimos.Font = new Font("Segoe UI", 9F);
-            gbEmprestimos.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEmprestimos.Location = new Point(32, 96);
-            gbEmprestimos.Name = "gbEmprestimos";
-            gbEmprestimos.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            gbEmprestimos.Size = new Size(880, 368);
-            gbEmprestimos.TabIndex = 15;
-            gbEmprestimos.Text = "Emprestimos";
+            gbRelatorioLivro.Controls.Add(dgvRelatorioLivro);
+            gbRelatorioLivro.Controls.Add(btnExcluir);
+            gbRelatorioLivro.Controls.Add(btnEditar);
+            gbRelatorioLivro.CustomizableEdges = customizableEdges9;
+            gbRelatorioLivro.Font = new Font("Segoe UI", 9F);
+            gbRelatorioLivro.ForeColor = Color.FromArgb(125, 137, 149);
+            gbRelatorioLivro.Location = new Point(32, 96);
+            gbRelatorioLivro.Name = "gbRelatorioLivro";
+            gbRelatorioLivro.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gbRelatorioLivro.Size = new Size(880, 368);
+            gbRelatorioLivro.TabIndex = 15;
+            gbRelatorioLivro.Text = "Relatorio Livro";
             // 
-            // dgvEmprestimo
+            // dgvRelatorioLivro
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            dgvEmprestimo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRelatorioLivro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -119,9 +115,8 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvEmprestimo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvEmprestimo.ColumnHeadersHeight = 4;
-            dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvRelatorioLivro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvRelatorioLivro.ColumnHeadersHeight = 32;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -129,10 +124,10 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvEmprestimo.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvEmprestimo.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEmprestimo.Location = new Point(24, 64);
-            dgvEmprestimo.Name = "dgvEmprestimo";
+            dgvRelatorioLivro.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvRelatorioLivro.GridColor = Color.FromArgb(231, 229, 255);
+            dgvRelatorioLivro.Location = new Point(24, 64);
+            dgvRelatorioLivro.Name = "dgvRelatorioLivro";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -140,32 +135,33 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvEmprestimo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvEmprestimo.RowHeadersVisible = false;
-            dgvEmprestimo.RowHeadersWidth = 62;
-            dgvEmprestimo.Size = new Size(832, 248);
-            dgvEmprestimo.TabIndex = 4;
-            dgvEmprestimo.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvEmprestimo.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvEmprestimo.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvEmprestimo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvEmprestimo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvEmprestimo.ThemeStyle.BackColor = Color.White;
-            dgvEmprestimo.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEmprestimo.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvEmprestimo.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvEmprestimo.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dgvEmprestimo.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvEmprestimo.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvEmprestimo.ThemeStyle.HeaderStyle.Height = 4;
-            dgvEmprestimo.ThemeStyle.ReadOnly = false;
-            dgvEmprestimo.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvEmprestimo.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvEmprestimo.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dgvEmprestimo.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
-            dgvEmprestimo.ThemeStyle.RowsStyle.Height = 33;
-            dgvEmprestimo.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvEmprestimo.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRelatorioLivro.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvRelatorioLivro.RowHeadersVisible = false;
+            dgvRelatorioLivro.RowHeadersWidth = 62;
+            dgvRelatorioLivro.Size = new Size(832, 248);
+            dgvRelatorioLivro.TabIndex = 4;
+            dgvRelatorioLivro.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvRelatorioLivro.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvRelatorioLivro.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvRelatorioLivro.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvRelatorioLivro.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvRelatorioLivro.ThemeStyle.BackColor = Color.White;
+            dgvRelatorioLivro.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvRelatorioLivro.ThemeStyle.HeaderStyle.Height = 32;
+            dgvRelatorioLivro.ThemeStyle.ReadOnly = false;
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(125, 137, 149);
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.Height = 33;
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvRelatorioLivro.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRelatorioLivro.CellClick += dgvRelatorioLivro_CellClick;
             // 
             // btnExcluir
             // 
@@ -186,6 +182,7 @@
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnEditar
             // 
@@ -206,39 +203,20 @@
             btnEditar.Size = new Size(104, 32);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.BackColor = Color.White;
-            btnSalvar.BorderRadius = 10;
-            btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
-            btnSalvar.CustomizableEdges = customizableEdges9;
-            btnSalvar.DisabledState.BorderColor = Color.DarkGray;
-            btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSalvar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
-            btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(544, 328);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnSalvar.Size = new Size(104, 32);
-            btnSalvar.TabIndex = 1;
-            btnSalvar.Text = "Salvar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // frmRelatorioLivro
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(942, 501);
-            Controls.Add(gbEmprestimos);
+            Controls.Add(gbRelatorioLivro);
             Controls.Add(guna2Panel1);
             Name = "frmRelatorioLivro";
             Text = "frmRelatorioLivro";
             guna2Panel1.ResumeLayout(false);
-            gbEmprestimos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
+            gbRelatorioLivro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).EndInit();
             ResumeLayout(false);
         }
 
@@ -246,10 +224,9 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
-        private Guna.UI2.WinForms.Guna2GroupBox gbEmprestimos;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvEmprestimo;
+        private Guna.UI2.WinForms.Guna2GroupBox gbRelatorioLivro;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvRelatorioLivro;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
-        private Guna.UI2.WinForms.Guna2Button btnSalvar;
     }
 }

@@ -16,5 +16,26 @@ namespace BibliotecaLork
         {
             InitializeComponent();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            var frmRelatorioLivroCad = new frmRelatorioLivroCad();
+            frmRelatorioLivroCad.ShowDialog();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRelatorioLivro_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

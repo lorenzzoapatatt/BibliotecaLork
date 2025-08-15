@@ -42,7 +42,7 @@
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnEsqueceuSenha = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -132,24 +132,26 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_Click;
+            btnLogin.KeyDown += btnLogin_KeyDown;
             // 
-            // guna2Button2
+            // btnEsqueceuSenha
             // 
-            guna2Button2.BackColor = Color.FromArgb(255, 224, 192);
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.WhiteSmoke;
-            guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.FromArgb(117, 117, 117);
-            guna2Button2.Location = new Point(464, 320);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(219, 34);
-            guna2Button2.TabIndex = 8;
-            guna2Button2.Text = "Esqueceu sua senha?";
+            btnEsqueceuSenha.BackColor = Color.FromArgb(255, 224, 192);
+            btnEsqueceuSenha.CustomizableEdges = customizableEdges7;
+            btnEsqueceuSenha.DisabledState.BorderColor = Color.DarkGray;
+            btnEsqueceuSenha.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEsqueceuSenha.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEsqueceuSenha.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEsqueceuSenha.FillColor = Color.WhiteSmoke;
+            btnEsqueceuSenha.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEsqueceuSenha.ForeColor = Color.FromArgb(117, 117, 117);
+            btnEsqueceuSenha.Location = new Point(464, 320);
+            btnEsqueceuSenha.Name = "btnEsqueceuSenha";
+            btnEsqueceuSenha.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEsqueceuSenha.Size = new Size(219, 34);
+            btnEsqueceuSenha.TabIndex = 8;
+            btnEsqueceuSenha.Text = "Esqueceu sua senha?";
+            btnEsqueceuSenha.Click += btnEsqueceuSenha_Click;
             // 
             // guna2Panel1
             // 
@@ -193,7 +195,7 @@
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(851, 501);
             Controls.Add(guna2Panel1);
-            Controls.Add(guna2Button2);
+            Controls.Add(btnEsqueceuSenha);
             Controls.Add(btnLogin);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(txtSenha);
@@ -212,7 +214,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnEsqueceuSenha;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

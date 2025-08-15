@@ -189,8 +189,7 @@
             // 
             // dgvLivros
             // 
-            dgvLivros.AllowUserToAddRows = false;
-            dgvLivros.AllowUserToDeleteRows = false;
+            dgvLivros.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvLivros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -201,7 +200,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvLivros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvLivros.ColumnHeadersHeight = 4;
+            dgvLivros.ColumnHeadersHeight = 32;
             dgvLivros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -214,7 +213,6 @@
             dgvLivros.GridColor = Color.FromArgb(231, 229, 255);
             dgvLivros.Location = new Point(256, 72);
             dgvLivros.Name = "dgvLivros";
-            dgvLivros.ReadOnly = true;
             dgvLivros.RowHeadersVisible = false;
             dgvLivros.RowHeadersWidth = 62;
             dgvLivros.Size = new Size(520, 304);
@@ -231,8 +229,8 @@
             dgvLivros.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvLivros.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvLivros.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvLivros.ThemeStyle.HeaderStyle.Height = 4;
-            dgvLivros.ThemeStyle.ReadOnly = true;
+            dgvLivros.ThemeStyle.HeaderStyle.Height = 32;
+            dgvLivros.ThemeStyle.ReadOnly = false;
             dgvLivros.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvLivros.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvLivros.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);

@@ -11,16 +11,11 @@ namespace BibliotecaLork
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //true, false
             bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
-            //se true
             if (loginValido)
             {
-                //oculta a tela de login
                 this.Hide();
-                //criar uma instancia de FrmPrincipal
                 var formPrincipal = new frmPrincipal();
-                //exibe a tela principal
                 formPrincipal.Show();
             }
         }
@@ -61,6 +56,22 @@ namespace BibliotecaLork
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEsqueceuSenha_Click(object sender, EventArgs e)
+        {
+            var frmUsuarioCadastrar = new frmUsuarioCad();
+            frmUsuarioCadastrar.ShowDialog();
+        }
+
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Hide();
+                var formPrincipal = new frmPrincipal();
+                formPrincipal.Show();
+            }
         }
     }
 }

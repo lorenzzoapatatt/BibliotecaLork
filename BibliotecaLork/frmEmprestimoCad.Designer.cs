@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimoCad));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -40,104 +39,94 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimoCad));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            gbEmprestimo = new Guna.UI2.WinForms.Guna2GroupBox();
-            cbLivro = new Guna.UI2.WinForms.Guna2ComboBox();
-            cbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
-            txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
-            txtDataDevolucao = new Guna.UI2.WinForms.Guna2TextBox();
-            txtDataEmprestimo = new Guna.UI2.WinForms.Guna2TextBox();
-            btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
+            btnExcluir = new Guna.UI2.WinForms.Guna2Button();
+            txtDataEmprestimo = new Guna.UI2.WinForms.Guna2TextBox();
+            txtDataDevolucao = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
+            cbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
+            cbLivro = new Guna.UI2.WinForms.Guna2ComboBox();
+            gbEmprestimo = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gbEmprestimo.SuspendLayout();
             SuspendLayout();
             // 
-            // gbEmprestimo
+            // btnSalvar
             // 
-            gbEmprestimo.Controls.Add(cbLivro);
-            gbEmprestimo.Controls.Add(cbUsuario);
-            gbEmprestimo.Controls.Add(txtStatus);
-            gbEmprestimo.Controls.Add(txtDataDevolucao);
-            gbEmprestimo.Controls.Add(txtDataEmprestimo);
-            gbEmprestimo.Controls.Add(btnExcluir);
-            gbEmprestimo.Controls.Add(btnSalvar);
-            gbEmprestimo.CustomizableEdges = customizableEdges15;
-            gbEmprestimo.Font = new Font("Segoe UI", 9F);
-            gbEmprestimo.ForeColor = Color.FromArgb(125, 137, 149);
-            gbEmprestimo.Location = new Point(32, 96);
-            gbEmprestimo.Name = "gbEmprestimo";
-            gbEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            gbEmprestimo.Size = new Size(880, 368);
-            gbEmprestimo.TabIndex = 17;
-            gbEmprestimo.Text = "Emprestimo";
+            btnSalvar.BackColor = Color.White;
+            btnSalvar.BorderRadius = 10;
+            btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
+            btnSalvar.CustomizableEdges = customizableEdges1;
+            btnSalvar.DisabledState.BorderColor = Color.DarkGray;
+            btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSalvar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
+            btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Location = new Point(656, 328);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSalvar.Size = new Size(104, 32);
+            btnSalvar.TabIndex = 1;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.Click += btnSalvar_Click;
             // 
-            // cbLivro
+            // btnExcluir
             // 
-            cbLivro.BackColor = Color.Transparent;
-            cbLivro.CustomizableEdges = customizableEdges1;
-            cbLivro.DrawMode = DrawMode.OwnerDrawFixed;
-            cbLivro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbLivro.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbLivro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbLivro.Font = new Font("Segoe UI", 10F);
-            cbLivro.ForeColor = Color.FromArgb(68, 88, 112);
-            cbLivro.ItemHeight = 30;
-            cbLivro.Location = new Point(528, 112);
-            cbLivro.Name = "cbLivro";
-            cbLivro.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            cbLivro.Size = new Size(320, 36);
-            cbLivro.TabIndex = 8;
+            btnExcluir.BackColor = Color.White;
+            btnExcluir.BorderRadius = 10;
+            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
+            btnExcluir.CustomizableEdges = customizableEdges3;
+            btnExcluir.DisabledState.BorderColor = Color.DarkGray;
+            btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExcluir.FillColor = Color.FromArgb(211, 47, 47);
+            btnExcluir.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcluir.ForeColor = Color.White;
+            btnExcluir.Location = new Point(768, 328);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnExcluir.Size = new Size(104, 32);
+            btnExcluir.TabIndex = 3;
+            btnExcluir.Text = "Cancelar";
+            btnExcluir.Click += btnExcluir_Click;
             // 
-            // cbUsuario
+            // txtDataEmprestimo
             // 
-            cbUsuario.BackColor = Color.Transparent;
-            cbUsuario.CustomizableEdges = customizableEdges3;
-            cbUsuario.DrawMode = DrawMode.OwnerDrawFixed;
-            cbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUsuario.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbUsuario.Font = new Font("Segoe UI", 10F);
-            cbUsuario.ForeColor = Color.FromArgb(68, 88, 112);
-            cbUsuario.ItemHeight = 30;
-            cbUsuario.Location = new Point(528, 56);
-            cbUsuario.Name = "cbUsuario";
-            cbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cbUsuario.Size = new Size(320, 36);
-            cbUsuario.TabIndex = 7;
-            // 
-            // txtStatus
-            // 
-            txtStatus.BackColor = Color.WhiteSmoke;
-            txtStatus.BorderColor = Color.FromArgb(193, 200, 207);
-            txtStatus.BorderRadius = 5;
-            txtStatus.BorderThickness = 0;
-            txtStatus.CustomizableEdges = customizableEdges5;
-            txtStatus.DefaultText = "";
-            txtStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtStatus.FillColor = Color.FromArgb(224, 224, 224);
-            txtStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStatus.Font = new Font("Segoe UI", 9F);
-            txtStatus.ForeColor = Color.Black;
-            txtStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStatus.Location = new Point(16, 184);
-            txtStatus.Margin = new Padding(4, 5, 4, 5);
-            txtStatus.Name = "txtStatus";
-            txtStatus.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtStatus.PlaceholderText = "Status";
-            txtStatus.SelectedText = "";
-            txtStatus.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtStatus.Size = new Size(448, 45);
-            txtStatus.TabIndex = 6;
+            txtDataEmprestimo.BackColor = Color.WhiteSmoke;
+            txtDataEmprestimo.BorderColor = Color.FromArgb(193, 200, 207);
+            txtDataEmprestimo.BorderRadius = 5;
+            txtDataEmprestimo.BorderThickness = 0;
+            txtDataEmprestimo.CustomizableEdges = customizableEdges5;
+            txtDataEmprestimo.DefaultText = "";
+            txtDataEmprestimo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtDataEmprestimo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtDataEmprestimo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtDataEmprestimo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtDataEmprestimo.FillColor = Color.FromArgb(224, 224, 224);
+            txtDataEmprestimo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDataEmprestimo.Font = new Font("Segoe UI", 9F);
+            txtDataEmprestimo.ForeColor = Color.Black;
+            txtDataEmprestimo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDataEmprestimo.Location = new Point(16, 56);
+            txtDataEmprestimo.Margin = new Padding(4, 5, 4, 5);
+            txtDataEmprestimo.Name = "txtDataEmprestimo";
+            txtDataEmprestimo.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
+            txtDataEmprestimo.PlaceholderText = "Data do Emprestimo";
+            txtDataEmprestimo.SelectedText = "";
+            txtDataEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtDataEmprestimo.Size = new Size(448, 45);
+            txtDataEmprestimo.TabIndex = 4;
             // 
             // txtDataDevolucao
             // 
@@ -166,74 +155,85 @@
             txtDataDevolucao.Size = new Size(448, 45);
             txtDataDevolucao.TabIndex = 5;
             // 
-            // txtDataEmprestimo
+            // txtStatus
             // 
-            txtDataEmprestimo.BackColor = Color.WhiteSmoke;
-            txtDataEmprestimo.BorderColor = Color.FromArgb(193, 200, 207);
-            txtDataEmprestimo.BorderRadius = 5;
-            txtDataEmprestimo.BorderThickness = 0;
-            txtDataEmprestimo.CustomizableEdges = customizableEdges9;
-            txtDataEmprestimo.DefaultText = "";
-            txtDataEmprestimo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtDataEmprestimo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtDataEmprestimo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtDataEmprestimo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtDataEmprestimo.FillColor = Color.FromArgb(224, 224, 224);
-            txtDataEmprestimo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataEmprestimo.Font = new Font("Segoe UI", 9F);
-            txtDataEmprestimo.ForeColor = Color.Black;
-            txtDataEmprestimo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataEmprestimo.Location = new Point(16, 56);
-            txtDataEmprestimo.Margin = new Padding(4, 5, 4, 5);
-            txtDataEmprestimo.Name = "txtDataEmprestimo";
-            txtDataEmprestimo.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtDataEmprestimo.PlaceholderText = "Data do Emprestimo";
-            txtDataEmprestimo.SelectedText = "";
-            txtDataEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtDataEmprestimo.Size = new Size(448, 45);
-            txtDataEmprestimo.TabIndex = 4;
+            txtStatus.BackColor = Color.WhiteSmoke;
+            txtStatus.BorderColor = Color.FromArgb(193, 200, 207);
+            txtStatus.BorderRadius = 5;
+            txtStatus.BorderThickness = 0;
+            txtStatus.CustomizableEdges = customizableEdges9;
+            txtStatus.DefaultText = "";
+            txtStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStatus.FillColor = Color.FromArgb(224, 224, 224);
+            txtStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStatus.Font = new Font("Segoe UI", 9F);
+            txtStatus.ForeColor = Color.Black;
+            txtStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStatus.Location = new Point(16, 184);
+            txtStatus.Margin = new Padding(4, 5, 4, 5);
+            txtStatus.Name = "txtStatus";
+            txtStatus.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
+            txtStatus.PlaceholderText = "Status";
+            txtStatus.SelectedText = "";
+            txtStatus.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtStatus.Size = new Size(448, 45);
+            txtStatus.TabIndex = 6;
             // 
-            // btnExcluir
+            // cbUsuario
             // 
-            btnExcluir.BackColor = Color.White;
-            btnExcluir.BorderRadius = 10;
-            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges11;
-            btnExcluir.DisabledState.BorderColor = Color.DarkGray;
-            btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExcluir.FillColor = Color.FromArgb(211, 47, 47);
-            btnExcluir.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.ForeColor = Color.White;
-            btnExcluir.Location = new Point(768, 328);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnExcluir.Size = new Size(104, 32);
-            btnExcluir.TabIndex = 3;
-            btnExcluir.Text = "Cancelar";
-            btnExcluir.Click += btnExcluir_Click;
+            cbUsuario.BackColor = Color.Transparent;
+            cbUsuario.CustomizableEdges = customizableEdges11;
+            cbUsuario.DrawMode = DrawMode.OwnerDrawFixed;
+            cbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbUsuario.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbUsuario.Font = new Font("Segoe UI", 10F);
+            cbUsuario.ForeColor = Color.FromArgb(68, 88, 112);
+            cbUsuario.ItemHeight = 30;
+            cbUsuario.Location = new Point(528, 56);
+            cbUsuario.Name = "cbUsuario";
+            cbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cbUsuario.Size = new Size(320, 36);
+            cbUsuario.TabIndex = 7;
             // 
-            // btnSalvar
+            // cbLivro
             // 
-            btnSalvar.BackColor = Color.White;
-            btnSalvar.BorderRadius = 10;
-            btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
-            btnSalvar.CustomizableEdges = customizableEdges13;
-            btnSalvar.DisabledState.BorderColor = Color.DarkGray;
-            btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSalvar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
-            btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(656, 328);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnSalvar.Size = new Size(104, 32);
-            btnSalvar.TabIndex = 1;
-            btnSalvar.Text = "Salvar";
-            btnSalvar.Click += btnSalvar_Click;
+            cbLivro.BackColor = Color.Transparent;
+            cbLivro.CustomizableEdges = customizableEdges13;
+            cbLivro.DrawMode = DrawMode.OwnerDrawFixed;
+            cbLivro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbLivro.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbLivro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbLivro.Font = new Font("Segoe UI", 10F);
+            cbLivro.ForeColor = Color.FromArgb(68, 88, 112);
+            cbLivro.ItemHeight = 30;
+            cbLivro.Location = new Point(528, 112);
+            cbLivro.Name = "cbLivro";
+            cbLivro.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cbLivro.Size = new Size(320, 36);
+            cbLivro.TabIndex = 8;
+            // 
+            // gbEmprestimo
+            // 
+            gbEmprestimo.Controls.Add(cbLivro);
+            gbEmprestimo.Controls.Add(cbUsuario);
+            gbEmprestimo.Controls.Add(txtStatus);
+            gbEmprestimo.Controls.Add(txtDataDevolucao);
+            gbEmprestimo.Controls.Add(txtDataEmprestimo);
+            gbEmprestimo.Controls.Add(btnExcluir);
+            gbEmprestimo.Controls.Add(btnSalvar);
+            gbEmprestimo.CustomizableEdges = customizableEdges15;
+            gbEmprestimo.Font = new Font("Segoe UI", 9F);
+            gbEmprestimo.ForeColor = Color.FromArgb(125, 137, 149);
+            gbEmprestimo.Location = new Point(32, 96);
+            gbEmprestimo.Name = "gbEmprestimo";
+            gbEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gbEmprestimo.Size = new Size(880, 368);
+            gbEmprestimo.TabIndex = 17;
+            gbEmprestimo.Text = "Emprestimo";
             // 
             // guna2Panel1
             // 
@@ -261,14 +261,14 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GroupBox gbEmprestimo;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
-        private Guna.UI2.WinForms.Guna2TextBox txtDataDevolucao;
-        private Guna.UI2.WinForms.Guna2TextBox txtDataEmprestimo;
-        private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbLivro;
+        private Guna.UI2.WinForms.Guna2Button btnExcluir;
+        private Guna.UI2.WinForms.Guna2TextBox txtDataEmprestimo;
+        private Guna.UI2.WinForms.Guna2TextBox txtDataDevolucao;
+        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2ComboBox cbUsuario;
+        private Guna.UI2.WinForms.Guna2ComboBox cbLivro;
+        private Guna.UI2.WinForms.Guna2GroupBox gbEmprestimo;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

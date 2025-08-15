@@ -82,6 +82,7 @@
             // 
             // dgvEmprestimos
             // 
+            dgvEmprestimos.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvEmprestimos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -92,8 +93,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvEmprestimos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvEmprestimos.ColumnHeadersHeight = 4;
-            dgvEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEmprestimos.ColumnHeadersHeight = 32;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -128,8 +128,8 @@
             dgvEmprestimos.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvEmprestimos.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvEmprestimos.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvEmprestimos.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvEmprestimos.ThemeStyle.HeaderStyle.Height = 4;
+            dgvEmprestimos.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvEmprestimos.ThemeStyle.HeaderStyle.Height = 32;
             dgvEmprestimos.ThemeStyle.ReadOnly = false;
             dgvEmprestimos.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvEmprestimos.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -138,6 +138,7 @@
             dgvEmprestimos.ThemeStyle.RowsStyle.Height = 33;
             dgvEmprestimos.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvEmprestimos.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvEmprestimos.CellClick += dgvEmprestimos_CellClick;
             // 
             // dgvEmprestimo
             // 
