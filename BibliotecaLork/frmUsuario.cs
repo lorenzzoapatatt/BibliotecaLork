@@ -28,6 +28,15 @@ namespace BibliotecaLork
             {
                 var usuarios = bd.Usuarios.ToList();
                 dgvUsuario.DataSource = usuarios;
+                if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                {
+                    usuarios = usuarios.Where(u => u.Nome.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvUsuario.DataSource = usuarios.ToList();
+                }
+                else
+                {
+                    dgvUsuario.DataSource = usuarios.ToList();
+                }
             }
         }
 
@@ -88,6 +97,11 @@ namespace BibliotecaLork
         }
 
         private void frmUsuario_Load(object sender, EventArgs e)
+        {
+            BuscarUsuario();
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
             BuscarUsuario();
         }

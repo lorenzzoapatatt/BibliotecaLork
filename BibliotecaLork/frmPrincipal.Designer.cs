@@ -186,6 +186,7 @@
             txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 11;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // dgvLivros
             // 

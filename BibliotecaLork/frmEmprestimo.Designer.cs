@@ -296,6 +296,7 @@
             txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // frmEmprestimo
             // 

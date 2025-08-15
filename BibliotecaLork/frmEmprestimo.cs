@@ -25,6 +25,15 @@ namespace BibliotecaLork
             {
                 var emprestimoLivros = bd.EmprestimoLivros.ToList();
                 dgvEmprestimos.DataSource = emprestimoLivros;
+                if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                {
+                    emprestimoLivros = emprestimoLivros.Where(e => e.Status.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
+                }
+                else
+                {
+                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
+                }
             }
         }
 
@@ -92,6 +101,9 @@ namespace BibliotecaLork
             BuscarEmprestimo();
         }
 
-
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarEmprestimo();
+        }
     }
 }

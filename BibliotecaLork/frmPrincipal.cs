@@ -30,6 +30,15 @@ namespace BibliotecaLork
             {
                 var livros = bd.Livros.ToList();
                 dgvLivros.DataSource = livros;
+                if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                {
+                    livros = livros.Where(l => l.Titulo.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvLivros.DataSource = livros.ToList();
+                }
+                else
+                {
+                    dgvLivros.DataSource = livros.ToList();
+                }
             }
         }
 
@@ -126,6 +135,9 @@ namespace BibliotecaLork
             frmLogin.Show();
         }
 
-        
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarLivro();
+        }
     }
 }

@@ -80,6 +80,7 @@
             txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // guna2Panel1
             // 
