@@ -63,6 +63,7 @@
             // 
             // gbPrincipal
             // 
+            gbPrincipal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             gbPrincipal.BorderColor = Color.WhiteSmoke;
             gbPrincipal.BorderRadius = 10;
             gbPrincipal.Controls.Add(btnRelatorioLivros);
@@ -193,6 +194,7 @@
             dgvLivros.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvLivros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvLivros.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -243,6 +245,7 @@
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEditar.BackColor = Color.WhiteSmoke;
             btnEditar.BorderRadius = 10;
             btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
@@ -264,6 +267,7 @@
             // 
             // btnExcluir
             // 
+            btnExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnExcluir.BackColor = Color.WhiteSmoke;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");

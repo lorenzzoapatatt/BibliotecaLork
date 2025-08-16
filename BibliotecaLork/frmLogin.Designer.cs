@@ -51,6 +51,7 @@
             // 
             // txtLogin
             // 
+            txtLogin.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtLogin.BackColor = Color.WhiteSmoke;
             txtLogin.BorderColor = Color.FromArgb(193, 200, 207);
             txtLogin.BorderRadius = 5;
@@ -78,6 +79,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtSenha.BorderColor = Color.FromArgb(193, 200, 207);
             txtSenha.BorderRadius = 5;
             txtSenha.BorderThickness = 0;
@@ -104,6 +106,7 @@
             // 
             // guna2HtmlLabel1
             // 
+            guna2HtmlLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(25, 118, 210);
@@ -115,6 +118,7 @@
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnLogin.BackColor = Color.WhiteSmoke;
             btnLogin.BorderRadius = 20;
             btnLogin.CustomizableEdges = customizableEdges5;
@@ -136,6 +140,7 @@
             // 
             // btnEsqueceuSenha
             // 
+            btnEsqueceuSenha.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnEsqueceuSenha.BackColor = Color.FromArgb(255, 224, 192);
             btnEsqueceuSenha.CustomizableEdges = customizableEdges7;
             btnEsqueceuSenha.DisabledState.BorderColor = Color.DarkGray;
@@ -155,6 +160,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2Panel1.BorderRadius = 20;
             guna2Panel1.Controls.Add(guna2HtmlLabel3);
             guna2Panel1.Controls.Add(guna2HtmlLabel2);

@@ -84,6 +84,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.Controls.Add(txtPesquisar);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
@@ -95,6 +96,7 @@
             // 
             // gbUsuario
             // 
+            gbUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbUsuario.Controls.Add(dgvUsuario);
             gbUsuario.Controls.Add(btnExcluir);
             gbUsuario.Controls.Add(btnEditar);
@@ -114,6 +116,7 @@
             dgvUsuario.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvUsuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -171,6 +174,7 @@
             // 
             // btnExcluir
             // 
+            btnExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
@@ -192,6 +196,7 @@
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEditar.BackColor = Color.White;
             btnEditar.BorderRadius = 10;
             btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
@@ -213,6 +218,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");

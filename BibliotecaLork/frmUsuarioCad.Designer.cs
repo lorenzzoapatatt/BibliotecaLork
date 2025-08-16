@@ -58,6 +58,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
             guna2Panel1.Location = new Point(0, 0);
@@ -68,6 +69,7 @@
             // 
             // gbFormulario
             // 
+            gbFormulario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbFormulario.Controls.Add(txtConfirmarSenha);
             gbFormulario.Controls.Add(txtSenha);
             gbFormulario.Controls.Add(txtEmail);
@@ -86,6 +88,7 @@
             // 
             // txtConfirmarSenha
             // 
+            txtConfirmarSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtConfirmarSenha.BackColor = Color.WhiteSmoke;
             txtConfirmarSenha.BorderColor = Color.FromArgb(193, 200, 207);
             txtConfirmarSenha.BorderRadius = 5;
@@ -113,6 +116,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSenha.BackColor = Color.WhiteSmoke;
             txtSenha.BorderColor = Color.FromArgb(193, 200, 207);
             txtSenha.BorderRadius = 5;
@@ -140,6 +144,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.BackColor = Color.WhiteSmoke;
             txtEmail.BorderColor = Color.FromArgb(193, 200, 207);
             txtEmail.BorderRadius = 5;
@@ -167,6 +172,7 @@
             // 
             // txtUsuario
             // 
+            txtUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtUsuario.BackColor = Color.WhiteSmoke;
             txtUsuario.BorderColor = Color.FromArgb(193, 200, 207);
             txtUsuario.BorderRadius = 5;
@@ -194,6 +200,7 @@
             // 
             // btnExcluir
             // 
+            btnExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
@@ -215,6 +222,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
