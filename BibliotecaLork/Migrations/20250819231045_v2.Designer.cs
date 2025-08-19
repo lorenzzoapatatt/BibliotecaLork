@@ -3,6 +3,7 @@ using BibliotecaLork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BibliotecaLork.Migrations
 {
     [DbContext(typeof(LivrosDBContext))]
-    partial class LivrosDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250819231045_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,8 +79,9 @@ namespace BibliotecaLork.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(65,2)");
+                    b.Property<string>("Preco")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Quantidade")
                         .IsRequired()

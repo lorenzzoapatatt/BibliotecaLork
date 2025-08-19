@@ -19,5 +19,6 @@ namespace BibliotecaLork
         public string Isbn { get; set; }
         public string Categoria { get; set; }
         public string Quantidade { get; set; }
+        public decimal Preco { get; set; }
     }
 }

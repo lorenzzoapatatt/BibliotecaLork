@@ -30,10 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,11 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroLivro));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroLivro));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gbFormulario = new Guna.UI2.WinForms.Guna2GroupBox();
             txtIsbn = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +58,7 @@
             txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
+            txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             gbFormulario.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,6 +74,7 @@
             // 
             // gbFormulario
             // 
+            gbFormulario.Controls.Add(txtPreco);
             gbFormulario.Controls.Add(txtIsbn);
             gbFormulario.Controls.Add(txtQuantidade);
             gbFormulario.Controls.Add(txtCategoria);
@@ -78,12 +82,12 @@
             gbFormulario.Controls.Add(txtTitulo);
             gbFormulario.Controls.Add(btnExcluir);
             gbFormulario.Controls.Add(btnSalvar);
-            gbFormulario.CustomizableEdges = customizableEdges17;
+            gbFormulario.CustomizableEdges = customizableEdges19;
             gbFormulario.Font = new Font("Segoe UI", 9F);
             gbFormulario.ForeColor = Color.FromArgb(125, 137, 149);
             gbFormulario.Location = new Point(32, 96);
             gbFormulario.Name = "gbFormulario";
-            gbFormulario.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gbFormulario.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gbFormulario.Size = new Size(880, 368);
             gbFormulario.TabIndex = 16;
             gbFormulario.Text = "Formulário";
@@ -94,7 +98,7 @@
             txtIsbn.BorderColor = Color.FromArgb(193, 200, 207);
             txtIsbn.BorderRadius = 5;
             txtIsbn.BorderThickness = 0;
-            txtIsbn.CustomizableEdges = customizableEdges3;
+            txtIsbn.CustomizableEdges = customizableEdges5;
             txtIsbn.DefaultText = "";
             txtIsbn.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtIsbn.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -111,7 +115,7 @@
             txtIsbn.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtIsbn.PlaceholderText = "ISBN";
             txtIsbn.SelectedText = "";
-            txtIsbn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtIsbn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtIsbn.Size = new Size(392, 45);
             txtIsbn.TabIndex = 8;
             // 
@@ -121,7 +125,7 @@
             txtQuantidade.BorderColor = Color.FromArgb(193, 200, 207);
             txtQuantidade.BorderRadius = 5;
             txtQuantidade.BorderThickness = 0;
-            txtQuantidade.CustomizableEdges = customizableEdges5;
+            txtQuantidade.CustomizableEdges = customizableEdges7;
             txtQuantidade.DefaultText = "";
             txtQuantidade.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtQuantidade.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -138,7 +142,7 @@
             txtQuantidade.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtQuantidade.PlaceholderText = "Quantidade";
             txtQuantidade.SelectedText = "";
-            txtQuantidade.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtQuantidade.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtQuantidade.Size = new Size(448, 45);
             txtQuantidade.TabIndex = 7;
             // 
@@ -148,7 +152,7 @@
             txtCategoria.BorderColor = Color.FromArgb(193, 200, 207);
             txtCategoria.BorderRadius = 5;
             txtCategoria.BorderThickness = 0;
-            txtCategoria.CustomizableEdges = customizableEdges7;
+            txtCategoria.CustomizableEdges = customizableEdges9;
             txtCategoria.DefaultText = "";
             txtCategoria.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCategoria.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -165,7 +169,7 @@
             txtCategoria.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtCategoria.PlaceholderText = "Categoria";
             txtCategoria.SelectedText = "";
-            txtCategoria.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtCategoria.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtCategoria.Size = new Size(448, 45);
             txtCategoria.TabIndex = 6;
             // 
@@ -175,7 +179,7 @@
             txtAutor.BorderColor = Color.FromArgb(193, 200, 207);
             txtAutor.BorderRadius = 5;
             txtAutor.BorderThickness = 0;
-            txtAutor.CustomizableEdges = customizableEdges9;
+            txtAutor.CustomizableEdges = customizableEdges11;
             txtAutor.DefaultText = "";
             txtAutor.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAutor.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -192,7 +196,7 @@
             txtAutor.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtAutor.PlaceholderText = "Autor";
             txtAutor.SelectedText = "";
-            txtAutor.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtAutor.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtAutor.Size = new Size(448, 45);
             txtAutor.TabIndex = 5;
             // 
@@ -202,7 +206,7 @@
             txtTitulo.BorderColor = Color.FromArgb(193, 200, 207);
             txtTitulo.BorderRadius = 5;
             txtTitulo.BorderThickness = 0;
-            txtTitulo.CustomizableEdges = customizableEdges11;
+            txtTitulo.CustomizableEdges = customizableEdges13;
             txtTitulo.DefaultText = "";
             txtTitulo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTitulo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -219,7 +223,7 @@
             txtTitulo.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtTitulo.PlaceholderText = "Titulo";
             txtTitulo.SelectedText = "";
-            txtTitulo.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtTitulo.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtTitulo.Size = new Size(448, 45);
             txtTitulo.TabIndex = 4;
             // 
@@ -228,7 +232,7 @@
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges13;
+            btnExcluir.CustomizableEdges = customizableEdges15;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -238,7 +242,7 @@
             btnExcluir.ForeColor = Color.White;
             btnExcluir.Location = new Point(768, 328);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Cancelar";
@@ -248,7 +252,7 @@
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
-            btnSalvar.CustomizableEdges = customizableEdges15;
+            btnSalvar.CustomizableEdges = customizableEdges17;
             btnSalvar.DisabledState.BorderColor = Color.DarkGray;
             btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -258,11 +262,38 @@
             btnSalvar.ForeColor = Color.White;
             btnSalvar.Location = new Point(656, 328);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnSalvar.Size = new Size(104, 32);
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
             btnSalvar.Click += btnSalvar_Click;
+            // 
+            // txtPreco
+            // 
+            txtPreco.BackColor = Color.WhiteSmoke;
+            txtPreco.BorderColor = Color.FromArgb(193, 200, 207);
+            txtPreco.BorderRadius = 5;
+            txtPreco.BorderThickness = 0;
+            txtPreco.CustomizableEdges = customizableEdges3;
+            txtPreco.DefaultText = "";
+            txtPreco.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPreco.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPreco.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPreco.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPreco.FillColor = Color.FromArgb(224, 224, 224);
+            txtPreco.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPreco.Font = new Font("Segoe UI", 9F);
+            txtPreco.ForeColor = Color.Black;
+            txtPreco.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPreco.Location = new Point(480, 120);
+            txtPreco.Margin = new Padding(4, 5, 4, 5);
+            txtPreco.Name = "txtPreco";
+            txtPreco.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
+            txtPreco.PlaceholderText = "Preço";
+            txtPreco.SelectedText = "";
+            txtPreco.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtPreco.Size = new Size(392, 45);
+            txtPreco.TabIndex = 9;
             // 
             // frmCadastroLivro
             // 
@@ -288,5 +319,6 @@
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2TextBox txtIsbn;
+        private Guna.UI2.WinForms.Guna2TextBox txtPreco;
     }
 }

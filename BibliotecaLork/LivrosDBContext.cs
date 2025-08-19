@@ -28,6 +28,9 @@ namespace BibliotecaLork
                 .HasOne(e => e.Livro)
                 .WithMany()
                 .HasForeignKey(e => e.LivroId);
+            modelBuilder.Entity<Livro>()
+                .Property(l => l.Preco)
+                .HasColumnType("decimal(65,2)");
         }
 
         public DbSet<Usuario> Usuarios { get; set; }

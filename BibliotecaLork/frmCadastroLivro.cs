@@ -35,6 +35,7 @@ namespace BibliotecaLork
                 txtCategoria.Text = _CadastroLivro.Categoria;
                 txtQuantidade.Text = _CadastroLivro.Quantidade;
                 txtIsbn.Text = _CadastroLivro.Isbn;
+                txtPreco.Text = _CadastroLivro.Preco.ToString("F2");
             }
         }
 
@@ -85,8 +86,14 @@ namespace BibliotecaLork
                 txtIsbn.Focus();
                 return false;
             }
+            else if (txtPreco.Text == "")
+            {
+                msg.Show("O campo Preço é obrigatório");
+                txtPreco.Focus();
+                return false;
+            }
 
-                return true;
+            return true;
         }
 
         private void SalvarForm()
@@ -109,11 +116,13 @@ namespace BibliotecaLork
                 string categoria = txtCategoria.Text;
                 string quantidade = txtQuantidade.Text;
                 string isbn = txtIsbn.Text;
+                string preco = txtPreco.Text;
                 _CadastroLivro.Titulo = titulo;
                 _CadastroLivro.Autor = autor;
                 _CadastroLivro.Categoria = categoria;
                 _CadastroLivro.Quantidade = quantidade;
                 _CadastroLivro.Isbn = isbn;
+                _CadastroLivro.Preco = decimal.Parse(txtPreco.Text);
                 banco.Livros.Update(_CadastroLivro);
                 banco.SaveChanges();
             }
@@ -134,6 +143,7 @@ namespace BibliotecaLork
                 string categoria = txtCategoria.Text;
                 string quantidade = txtQuantidade.Text;
                 string isbn = txtIsbn.Text;
+                string preco = txtPreco.Text;
 
                 var cadastroLivro = new Livro()
                 {
@@ -141,7 +151,8 @@ namespace BibliotecaLork
                     Autor = autor,
                     Categoria = categoria,
                     Quantidade = quantidade,
-                    Isbn = isbn
+                    Isbn = isbn,
+                    Preco = decimal.Parse(txtPreco.Text)
                 };
                 banco.Livros.Add(cadastroLivro);
                 banco.SaveChanges();

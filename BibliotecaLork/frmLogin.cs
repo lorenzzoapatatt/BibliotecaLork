@@ -73,5 +73,27 @@ namespace BibliotecaLork
                 formPrincipal.Show();
             }
         }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
+                if (loginValido)
+                {
+                    this.Hide();
+                    var formPrincipal = new frmPrincipal();
+                    formPrincipal.Show();
+                }
+            }
+        }
+
+        private void txtLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSenha.Focus();
+            }
+        }
     }
 }
