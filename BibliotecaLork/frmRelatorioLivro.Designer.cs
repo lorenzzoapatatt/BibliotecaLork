@@ -33,19 +33,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioLivro));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             gbRelatorioLivro = new Guna.UI2.WinForms.Guna2GroupBox();
+            btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             dgvRelatorioLivro = new Guna.UI2.WinForms.Guna2DataGridView();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
@@ -88,21 +91,44 @@
             txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // gbRelatorioLivro
             // 
+            gbRelatorioLivro.Controls.Add(btnSalvar);
             gbRelatorioLivro.Controls.Add(dgvRelatorioLivro);
             gbRelatorioLivro.Controls.Add(btnExcluir);
             gbRelatorioLivro.Controls.Add(btnEditar);
-            gbRelatorioLivro.CustomizableEdges = customizableEdges9;
+            gbRelatorioLivro.CustomizableEdges = customizableEdges11;
             gbRelatorioLivro.Font = new Font("Segoe UI", 9F);
             gbRelatorioLivro.ForeColor = Color.FromArgb(125, 137, 149);
             gbRelatorioLivro.Location = new Point(32, 96);
             gbRelatorioLivro.Name = "gbRelatorioLivro";
-            gbRelatorioLivro.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gbRelatorioLivro.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gbRelatorioLivro.Size = new Size(880, 368);
             gbRelatorioLivro.TabIndex = 15;
             gbRelatorioLivro.Text = "Relatorio Livro";
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.BackColor = Color.White;
+            btnSalvar.BorderRadius = 10;
+            btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
+            btnSalvar.CustomizableEdges = customizableEdges5;
+            btnSalvar.DisabledState.BorderColor = Color.DarkGray;
+            btnSalvar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSalvar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSalvar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
+            btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Location = new Point(544, 328);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSalvar.Size = new Size(104, 32);
+            btnSalvar.TabIndex = 5;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // dgvRelatorioLivro
             // 
@@ -167,8 +193,8 @@
             // 
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
-            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges5;
+            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
+            btnExcluir.CustomizableEdges = customizableEdges7;
             btnExcluir.DisabledState.BorderColor = Color.DarkGray;
             btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -178,7 +204,7 @@
             btnExcluir.ForeColor = Color.White;
             btnExcluir.Location = new Point(768, 328);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
@@ -188,8 +214,8 @@
             // 
             btnEditar.BackColor = Color.White;
             btnEditar.BorderRadius = 10;
-            btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
-            btnEditar.CustomizableEdges = customizableEdges7;
+            btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
+            btnEditar.CustomizableEdges = customizableEdges9;
             btnEditar.DisabledState.BorderColor = Color.DarkGray;
             btnEditar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -199,7 +225,7 @@
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(656, 328);
             btnEditar.Name = "btnEditar";
-            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnEditar.Size = new Size(104, 32);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
@@ -214,6 +240,7 @@
             Controls.Add(guna2Panel1);
             Name = "frmRelatorioLivro";
             Text = "frmRelatorioLivro";
+            Load += frmRelatorioLivro_Load;
             guna2Panel1.ResumeLayout(false);
             gbRelatorioLivro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).EndInit();
@@ -228,5 +255,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvRelatorioLivro;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2Button btnSalvar;
     }
 }

@@ -43,7 +43,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gbRelatorioLivroCad = new Guna.UI2.WinForms.Guna2GroupBox();
             cbLivro = new Guna.UI2.WinForms.Guna2ComboBox();
-            cbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
+            cbEmprestimo = new Guna.UI2.WinForms.Guna2ComboBox();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -53,7 +53,7 @@
             // gbRelatorioLivroCad
             // 
             gbRelatorioLivroCad.Controls.Add(cbLivro);
-            gbRelatorioLivroCad.Controls.Add(cbUsuario);
+            gbRelatorioLivroCad.Controls.Add(cbEmprestimo);
             gbRelatorioLivroCad.Controls.Add(btnExcluir);
             gbRelatorioLivroCad.Controls.Add(btnSalvar);
             gbRelatorioLivroCad.CustomizableEdges = customizableEdges9;
@@ -83,22 +83,22 @@
             cbLivro.Size = new Size(320, 36);
             cbLivro.TabIndex = 8;
             // 
-            // cbUsuario
+            // cbEmprestimo
             // 
-            cbUsuario.BackColor = Color.Transparent;
-            cbUsuario.CustomizableEdges = customizableEdges3;
-            cbUsuario.DrawMode = DrawMode.OwnerDrawFixed;
-            cbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUsuario.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbUsuario.Font = new Font("Segoe UI", 10F);
-            cbUsuario.ForeColor = Color.FromArgb(68, 88, 112);
-            cbUsuario.ItemHeight = 30;
-            cbUsuario.Location = new Point(528, 56);
-            cbUsuario.Name = "cbUsuario";
-            cbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cbUsuario.Size = new Size(320, 36);
-            cbUsuario.TabIndex = 7;
+            cbEmprestimo.BackColor = Color.Transparent;
+            cbEmprestimo.CustomizableEdges = customizableEdges3;
+            cbEmprestimo.DrawMode = DrawMode.OwnerDrawFixed;
+            cbEmprestimo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEmprestimo.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbEmprestimo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbEmprestimo.Font = new Font("Segoe UI", 10F);
+            cbEmprestimo.ForeColor = Color.FromArgb(68, 88, 112);
+            cbEmprestimo.ItemHeight = 30;
+            cbEmprestimo.Location = new Point(24, 112);
+            cbEmprestimo.Name = "cbEmprestimo";
+            cbEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cbEmprestimo.Size = new Size(320, 36);
+            cbEmprestimo.TabIndex = 7;
             // 
             // btnExcluir
             // 
@@ -119,6 +119,7 @@
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Cancelar";
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnSalvar
             // 
@@ -139,6 +140,7 @@
             btnSalvar.Size = new Size(104, 32);
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // guna2Panel1
             // 
@@ -159,6 +161,7 @@
             Controls.Add(guna2Panel1);
             Name = "frmRelatorioLivroCad";
             Text = "frmRelatorioLivroCad";
+            Load += frmRelatorioLivroCad_Load;
             gbRelatorioLivroCad.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -167,7 +170,7 @@
 
         private Guna.UI2.WinForms.Guna2GroupBox gbRelatorioLivroCad;
         private Guna.UI2.WinForms.Guna2ComboBox cbLivro;
-        private Guna.UI2.WinForms.Guna2ComboBox cbUsuario;
+        private Guna.UI2.WinForms.Guna2ComboBox cbEmprestimo;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
