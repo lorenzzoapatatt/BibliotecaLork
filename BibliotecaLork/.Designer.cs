@@ -11,14 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -48,7 +40,6 @@
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gbRelatorioLivroCad.SuspendLayout();
-            SuspendLayout();
             // 
             // gbRelatorioLivroCad
             // 
@@ -119,7 +110,6 @@
             btnExcluir.Size = new Size(104, 32);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Cancelar";
-            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnSalvar
             // 
@@ -140,7 +130,6 @@
             btnSalvar.Size = new Size(104, 32);
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
-            btnSalvar.Click += btnSalvar_Click;
             // 
             // guna2Panel1
             // 
@@ -154,16 +143,6 @@
             // 
             // frmRelatorioLivroCad
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 480);
-            Controls.Add(gbRelatorioLivroCad);
-            Controls.Add(guna2Panel1);
-            Name = "frmRelatorioLivroCad";
-            Text = "frmRelatorioLivroCad";
-            Load += frmRelatorioLivroCad_Load;
-            gbRelatorioLivroCad.ResumeLayout(false);
-            ResumeLayout(false);
         }
 
         #endregion

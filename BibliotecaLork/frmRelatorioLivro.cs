@@ -8,87 +8,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BibliotecaLork;
-
-public partial class frmRelatorioLivro : Form
+namespace BibliotecaLork
 {
-    RelatorioLivroEmprestado? relatorioLivroSelecionado;
-    public frmRelatorioLivro()
+    public partial class frmRelatorioLivro : Form
     {
-        InitializeComponent();
-    }
-
-    private void BuscarRelatorio()
-    {
-
-    }
-
-    private void btnEditar_Click(object sender, EventArgs e)
-    {
-        var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-        msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-
-        if (relatorioLivroSelecionado != null)
+        public frmRelatorioLivro()
         {
-            var relatorioEditar = new frmRelatorioLivroCad(relatorioLivroSelecionado);
-            relatorioEditar.Show();
-            msg.Show("Relatório editado com sucesso!");
-            BuscarRelatorio();
-            relatorioLivroSelecionado = null;
+            InitializeComponent();
         }
-        else
-        {
-            msg.Show("Selecione um relatório para editar.");
-        }
-    }
-    private void btnSalvar_Click(object sender, EventArgs e)
-    {
-        var frmRelatorioLivroCad = new frmRelatorioLivroCad();
-        frmRelatorioLivroCad.ShowDialog();
-        BuscarRelatorio();
-    }
-    private void btnExcluir_Click(object sender, EventArgs e)
-    {
-        var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
 
-        msg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-
-        if (relatorioLivroSelecionado != null)
+        public void BuscarEmprestimo()
         {
             using (var bd = new LivrosDBContext())
             {
-                bd.RelatorioLivroEmprestados.Remove(relatorioLivroSelecionado);
-                bd.SaveChanges();
-                msg.Show("Relatório excluído com sucesso!");
-                BuscarRelatorio();
-                relatorioLivroSelecionado = null;
+                var emprestimoLivros = bd.EmprestimoLivros.ToList();
+                dgvRelatorio.DataSource = emprestimoLivros;
+                if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                {
+                    emprestimoLivros = emprestimoLivros.Where(e => e.Livro.Titulo.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvRelatorio.DataSource = emprestimoLivros.ToList();
+                }
+                else
+                {
+                    dgvRelatorio.DataSource = emprestimoLivros.ToList();
+                }
             }
         }
-        else
-        {
-            msg.Show("Selecione um relatório para excluir.");
-        }
-    }
 
-    private void dgvRelatorioLivro_CellClick(object sender, DataGridViewCellEventArgs e)
-    {
-        if (!dgvRelatorioLivro.Rows[e.RowIndex].IsNewRow)
+        private void BuscarLivro()
         {
-            var livroEmprestado = dgvRelatorioLivro.Rows[e.RowIndex].DataBoundItem as RelatorioLivroEmprestado;
-            if (livroEmprestado != null)
+            using (var bd = new LivrosDBContext())
             {
-                relatorioLivroSelecionado = livroEmprestado;
+                var livros = bd.Livros.ToList();
+                dgvRelatorio.DataSource = livros;
+                if (!string.IsNullOrEmpty(txtPesquisar.Text))
+                {
+                    livros = livros.Where(l => l.Titulo.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvRelatorio.DataSource = livros.ToList();
+                }
+                else
+                {
+                    dgvRelatorio.DataSource = livros.ToList();
+                }
             }
         }
-    }
 
-    private void frmRelatorioLivro_Load(object sender, EventArgs e)
-    {
-        BuscarRelatorio();
-    }
-
-    private void txtPesquisar_TextChanged(object sender, EventArgs e)
-    {
-        BuscarRelatorio();
+        private void frmRelatorioLivro_Load(object sender, EventArgs e)
+        {
+            BuscarEmprestimo();
+            BuscarLivro();
+        }
     }
 }

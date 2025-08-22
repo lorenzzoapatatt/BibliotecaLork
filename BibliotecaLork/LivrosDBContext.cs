@@ -36,6 +36,6 @@ namespace BibliotecaLork
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<EmprestimoLivro> EmprestimoLivros { get; set; }
-        public DbSet<RelatorioLivroEmprestado> RelatorioLivroEmprestados { get; set; }
+     
     }
 }
