@@ -160,5 +160,10 @@ namespace BibliotecaLork
             msg.Show("Cardápio salvo com sucesso!");
             this.Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

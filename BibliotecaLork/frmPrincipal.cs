@@ -88,8 +88,11 @@ namespace BibliotecaLork
         {
             if (e.RowIndex >= 0)
             {
-                LivroSelecionado = dgvLivros.Rows[e.RowIndex].DataBoundItem as Livro;
-                btnEditar.Enabled = true;
+                using (var bd = new LivrosDBContext())
+                {
+                    var id = Convert.ToInt32(dgvLivros.Rows[e.RowIndex].Cells[0].Value);
+                    LivroSelecionado = bd.Livros.FirstOrDefault(l => l.Id == id);
+                }
             }
         }
         private void txtPesquisar_TextChanged(object sender, EventArgs e)

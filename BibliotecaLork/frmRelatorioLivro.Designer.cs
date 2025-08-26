@@ -57,6 +57,7 @@
             // 
             // gbRelatorioLivro
             // 
+            gbRelatorioLivro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbRelatorioLivro.Controls.Add(dgvRelatorio);
             gbRelatorioLivro.Controls.Add(dgvRelatorioLivro);
             gbRelatorioLivro.CustomizableEdges = customizableEdges1;
@@ -74,6 +75,7 @@
             dgvRelatorio.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvRelatorio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRelatorio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -214,6 +216,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(txtPesquisar);
             guna2Panel1.CustomizableEdges = customizableEdges5;

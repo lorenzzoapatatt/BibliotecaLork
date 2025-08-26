@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaLork
 {
@@ -28,34 +29,64 @@ namespace BibliotecaLork
         }
         private void BuscarEmprestimo()
         {
+            //using (var bd = new LivrosDBContext())
+            //{
+            //    // LINQ
+            //    var consultaEmprestimos = (from empLiv in bd.EmprestimoLivros
+            //                               join usuarios in bd.Usuarios on empLiv.UsuarioId equals usuarios.Id
+            //                               join livro in bd.Livros on empLiv.LivroId equals livro.Id
+            //                               select new
+            //                               {
+            //                                   empLiv,
+            //                                   usuarios,
+            //                                   livro
+            //                               });
+
+            //    if (!string.IsNullOrEmpty(txtPesquisar.Text))
+            //    {
+            //        consultaEmprestimos = consultaEmprestimos.Where(e => e.empLiv.Status.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase));
+            //    }
+
+            //    var dadosEmprestimoLivro = consultaEmprestimos.Select(s => new
+            //    {
+            //        Id = s.empLiv.Id,
+            //        DataEmprestimo = s.empLiv.DataEmprestimo,
+            //        DataDevolucao = s.empLiv.DataDevolucao,
+            //        Status = s.empLiv.Status,
+            //        Usuario = s.usuarios.Nome,
+            //        Livro = s.livro.Titulo
+            //    });
+
+            //    dgvEmprestimos.DataSource = dadosEmprestimoLivro.ToList();
+            //}
+
+            // LAMBDA
             using (var bd = new LivrosDBContext())
             {
+                var emprestimoLivros = bd.EmprestimoLivros
+                    .Include(emp => emp.Livro)
+                    .Include(emp => emp.Usuario)
+                    .Select(emp => new
+                    {
+                        Id = emp.Id,
+                        DataEmprestimo = emp.DataEmprestimo,
+                        DataDevolucao = emp.DataDevolucao,
+                        Status = emp.Status,
+                        Usuario = emp.Usuario.Nome,
+                        Livro = emp.Livro.Titulo
+                    })
+                    .ToList();
 
-                var consultaEmprestimos = (from empLiv in bd.EmprestimoLivros
-                                          join usuarios in bd.Usuarios on empLiv.UsuarioId equals usuarios.Id
-                                          join livro in bd.Livros on empLiv.LivroId equals livro.Id
-                                           select new {
-                                              empLiv,
-                                              usuarios,
-                                              livro
-                                          });
-
+                dgvEmprestimos.DataSource = emprestimoLivros;
                 if (!string.IsNullOrEmpty(txtPesquisar.Text))
                 {
-                    consultaEmprestimos = consultaEmprestimos.Where(e => e.empLiv.Status.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase));
+                    emprestimoLivros = emprestimoLivros.Where(e => e.Livro.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
+                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
                 }
-
-                var dadosEmprestimoLivro = consultaEmprestimos.Select(s => new
+                else
                 {
-                    Id = s.empLiv.Id,
-                    DataEmprestimo = s.empLiv.DataEmprestimo,
-                    DataDevolucao = s.empLiv.DataDevolucao,
-                    Status = s.empLiv.Status,
-                    Usuario = s.usuarios.Nome,
-                    Livro = s.livro.Titulo
-                });
-
-                dgvEmprestimos.DataSource = dadosEmprestimoLivro.ToList();
+                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
+                }
             }
         }
 
@@ -68,7 +99,6 @@ namespace BibliotecaLork
             {
                 var emprestimoEditar = new frmEmprestimoCad(emprestimoLivroSelecionado);
                 emprestimoEditar.Show();
-                msg.Show("Livro editado com sucesso!");
                 BuscarEmprestimo();
                 emprestimoLivroSelecionado = null;
             }
@@ -111,7 +141,19 @@ namespace BibliotecaLork
         {
             if (e.RowIndex >= 0)
             {
-                emprestimoLivroSelecionado = dgvEmprestimos.Rows[e.RowIndex].DataBoundItem as EmprestimoLivro;
+ 
+                using (var bd = new LivrosDBContext())
+                {
+                    //LINQ
+                    //int emprestimoId = Convert.ToInt32(dgvEmprestimos.Rows[e.RowIndex].Cells["Id"].Value);
+                    //emprestimoLivroSelecionado = bd.EmprestimoLivros.FirstOrDefault(el => el.Id == emprestimoId);
+
+                    //LAMBDA
+                    int emprestimoId = Convert.ToInt32(dgvEmprestimos.Rows[e.RowIndex].Cells["Id"].Value);
+                    emprestimoLivroSelecionado = bd.EmprestimoLivros.Where(el => el.Id == emprestimoId).FirstOrDefault();
+
+                }
+
                 btnEditar.Enabled = true;
             }
         }

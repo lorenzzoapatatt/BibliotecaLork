@@ -90,9 +90,11 @@ namespace BibliotecaLork
         {
             if (e.RowIndex >= 0)
             {
-                //pegar o usuario selecionado
-                usuarioSelecionado = dgvUsuario.Rows[e.RowIndex].DataBoundItem as Usuario;
-                btnEditar.Enabled = true;
+                using (var bd = new LivrosDBContext())
+                {
+                    int usuarioId = Convert.ToInt32(dgvUsuario.Rows[e.RowIndex].Cells["Id"].Value);
+                    usuarioSelecionado = bd.Usuarios.FirstOrDefault(u => u.Id == usuarioId);
+                }
             }
         }
 

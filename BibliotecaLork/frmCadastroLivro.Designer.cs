@@ -50,6 +50,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gbFormulario = new Guna.UI2.WinForms.Guna2GroupBox();
             txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             txtIsbn = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,9 +58,8 @@
             txtCategoria = new Guna.UI2.WinForms.Guna2TextBox();
             txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
             txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
-            btnExcluir = new Guna.UI2.WinForms.Guna2Button();
+            btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             gbFormulario.SuspendLayout();
             SuspendLayout();
@@ -76,6 +76,17 @@
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 15;
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(16, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(173, 50);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "Cadastrar";
+            // 
             // gbFormulario
             // 
             gbFormulario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -85,7 +96,7 @@
             gbFormulario.Controls.Add(txtCategoria);
             gbFormulario.Controls.Add(txtAutor);
             gbFormulario.Controls.Add(txtTitulo);
-            gbFormulario.Controls.Add(btnExcluir);
+            gbFormulario.Controls.Add(btnCancelar);
             gbFormulario.Controls.Add(btnSalvar);
             gbFormulario.CustomizableEdges = customizableEdges19;
             gbFormulario.Font = new Font("Segoe UI", 9F);
@@ -265,26 +276,27 @@
             txtTitulo.Size = new Size(448, 45);
             txtTitulo.TabIndex = 4;
             // 
-            // btnExcluir
+            // btnCancelar
             // 
-            btnExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnExcluir.BackColor = Color.White;
-            btnExcluir.BorderRadius = 10;
-            btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
-            btnExcluir.CustomizableEdges = customizableEdges15;
-            btnExcluir.DisabledState.BorderColor = Color.DarkGray;
-            btnExcluir.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExcluir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExcluir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExcluir.FillColor = Color.FromArgb(211, 47, 47);
-            btnExcluir.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.ForeColor = Color.White;
-            btnExcluir.Location = new Point(768, 328);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnExcluir.Size = new Size(104, 32);
-            btnExcluir.TabIndex = 3;
-            btnExcluir.Text = "Cancelar";
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancelar.BackColor = Color.White;
+            btnCancelar.BorderRadius = 10;
+            btnCancelar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
+            btnCancelar.CustomizableEdges = customizableEdges15;
+            btnCancelar.DisabledState.BorderColor = Color.DarkGray;
+            btnCancelar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancelar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancelar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelar.FillColor = Color.FromArgb(211, 47, 47);
+            btnCancelar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.White;
+            btnCancelar.Location = new Point(768, 328);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnCancelar.Size = new Size(104, 32);
+            btnCancelar.TabIndex = 3;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 
@@ -307,17 +319,6 @@
             btnSalvar.TabIndex = 1;
             btnSalvar.Text = "Salvar";
             btnSalvar.Click += btnSalvar_Click;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
-            guna2HtmlLabel1.Location = new Point(16, 16);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(173, 50);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Cadastrar";
             // 
             // frmCadastroLivro
             // 
@@ -342,7 +343,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCategoria;
         private Guna.UI2.WinForms.Guna2TextBox txtAutor;
         private Guna.UI2.WinForms.Guna2TextBox txtTitulo;
-        private Guna.UI2.WinForms.Guna2Button btnExcluir;
+        private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2TextBox txtIsbn;
         private Guna.UI2.WinForms.Guna2TextBox txtPreco;
