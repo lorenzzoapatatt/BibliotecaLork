@@ -47,12 +47,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gbUsuario = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvUsuario = new Guna.UI2.WinForms.Guna2DataGridView();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             gbUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
@@ -95,6 +95,17 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 13;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(240, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(157, 50);
+            guna2HtmlLabel1.TabIndex = 15;
+            guna2HtmlLabel1.Text = "Usuários";
             // 
             // gbUsuario
             // 
@@ -232,24 +243,13 @@
             btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
             btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(544, 328);
+            btnSalvar.Location = new Point(512, 328);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnSalvar.Size = new Size(104, 32);
+            btnSalvar.Size = new Size(136, 32);
             btnSalvar.TabIndex = 1;
-            btnSalvar.Text = "Salvar";
+            btnSalvar.Text = "Novo Usuário";
             btnSalvar.Click += btnSalvar_Click;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
-            guna2HtmlLabel1.Location = new Point(240, 16);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(157, 50);
-            guna2HtmlLabel1.TabIndex = 15;
-            guna2HtmlLabel1.Text = "Usuários";
             // 
             // frmUsuario
             // 

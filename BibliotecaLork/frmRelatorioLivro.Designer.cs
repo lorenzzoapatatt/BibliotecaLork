@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -38,17 +38,20 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioLivro));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioLivro));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gbRelatorioLivro = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvRelatorio = new Guna.UI2.WinForms.Guna2DataGridView();
             dgvRelatorioLivro = new Guna.UI2.WinForms.Guna2DataGridView();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnEditar = new Guna.UI2.WinForms.Guna2Button();
             gbRelatorioLivro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRelatorio).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).BeginInit();
@@ -58,15 +61,16 @@
             // gbRelatorioLivro
             // 
             gbRelatorioLivro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gbRelatorioLivro.Controls.Add(btnEditar);
             gbRelatorioLivro.Controls.Add(dgvRelatorio);
             gbRelatorioLivro.Controls.Add(dgvRelatorioLivro);
-            gbRelatorioLivro.CustomizableEdges = customizableEdges1;
+            gbRelatorioLivro.CustomizableEdges = customizableEdges3;
             gbRelatorioLivro.Font = new Font("Segoe UI", 9F);
             gbRelatorioLivro.ForeColor = Color.FromArgb(125, 137, 149);
             gbRelatorioLivro.Location = new Point(32, 96);
             gbRelatorioLivro.Name = "gbRelatorioLivro";
-            gbRelatorioLivro.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gbRelatorioLivro.Size = new Size(880, 368);
+            gbRelatorioLivro.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gbRelatorioLivro.Size = new Size(880, 432);
             gbRelatorioLivro.TabIndex = 19;
             gbRelatorioLivro.Text = "Relatorio Livro";
             // 
@@ -94,7 +98,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvRelatorio.DefaultCellStyle = dataGridViewCellStyle3;
             dgvRelatorio.GridColor = Color.FromArgb(231, 229, 255);
-            dgvRelatorio.Location = new Point(24, 60);
+            dgvRelatorio.Location = new Point(24, 48);
             dgvRelatorio.Name = "dgvRelatorio";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
@@ -106,7 +110,7 @@
             dgvRelatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvRelatorio.RowHeadersVisible = false;
             dgvRelatorio.RowHeadersWidth = 62;
-            dgvRelatorio.Size = new Size(832, 276);
+            dgvRelatorio.Size = new Size(832, 328);
             dgvRelatorio.TabIndex = 5;
             dgvRelatorio.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvRelatorio.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -194,7 +198,7 @@
             txtPesquisar.BackColor = Color.FromArgb(25, 118, 210);
             txtPesquisar.BorderColor = Color.WhiteSmoke;
             txtPesquisar.BorderRadius = 10;
-            txtPesquisar.CustomizableEdges = customizableEdges3;
+            txtPesquisar.CustomizableEdges = customizableEdges5;
             txtPesquisar.DefaultText = "";
             txtPesquisar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPesquisar.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -209,7 +213,7 @@
             txtPesquisar.Name = "txtPesquisar";
             txtPesquisar.PlaceholderText = "";
             txtPesquisar.SelectedText = "";
-            txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
             txtPesquisar.TextChanged += txtPesquisar_TextChanged;
@@ -219,11 +223,11 @@
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(txtPesquisar);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 18;
             // 
@@ -238,11 +242,32 @@
             guna2HtmlLabel1.TabIndex = 13;
             guna2HtmlLabel1.Text = "Relatório dos Livros";
             // 
+            // btnEditar
+            // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEditar.BackColor = Color.White;
+            btnEditar.BorderRadius = 10;
+            btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
+            btnEditar.CustomizableEdges = customizableEdges1;
+            btnEditar.DisabledState.BorderColor = Color.DarkGray;
+            btnEditar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditar.FillColor = Color.FromArgb(251, 192, 45);
+            btnEditar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(752, 392);
+            btnEditar.Name = "btnEditar";
+            btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnEditar.Size = new Size(104, 32);
+            btnEditar.TabIndex = 6;
+            btnEditar.Text = "Editar";
+            // 
             // frmRelatorioLivro
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(943, 489);
+            ClientSize = new Size(943, 541);
             Controls.Add(gbRelatorioLivro);
             Controls.Add(guna2Panel1);
             Name = "frmRelatorioLivro";
@@ -264,5 +289,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
     }
 }
