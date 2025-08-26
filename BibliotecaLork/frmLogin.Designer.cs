@@ -110,11 +110,11 @@
             // 
             guna2HtmlLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(25, 118, 210);
             guna2HtmlLabel1.Location = new Point(512, 80);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(120, 50);
+            guna2HtmlLabel1.Size = new Size(127, 50);
             guna2HtmlLabel1.TabIndex = 4;
             guna2HtmlLabel1.Text = "Sign In";
             // 

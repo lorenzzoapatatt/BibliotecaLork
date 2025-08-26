@@ -57,6 +57,7 @@
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gbEmprestimos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // gbEmprestimos
             // 
+            gbEmprestimos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbEmprestimos.Controls.Add(dgvEmprestimos);
             gbEmprestimos.Controls.Add(dgvEmprestimo);
             gbEmprestimos.Controls.Add(btnExcluir);
@@ -85,6 +87,7 @@
             dgvEmprestimos.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvEmprestimos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvEmprestimos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -201,6 +204,7 @@
             // 
             // btnExcluir
             // 
+            btnExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnExcluir.BackColor = Color.White;
             btnExcluir.BorderRadius = 10;
             btnExcluir.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage");
@@ -222,6 +226,7 @@
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEditar.BackColor = Color.White;
             btnEditar.BorderRadius = 10;
             btnEditar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage1");
@@ -243,6 +248,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSalvar.BackColor = Color.White;
             btnSalvar.BorderRadius = 10;
             btnSalvar.CustomImages.CheckedImage = (Image)resources.GetObject("resource.CheckedImage2");
@@ -254,16 +260,18 @@
             btnSalvar.FillColor = Color.FromArgb(86, 182, 60);
             btnSalvar.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(544, 328);
+            btnSalvar.Location = new Point(480, 328);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSalvar.Size = new Size(104, 32);
+            btnSalvar.Size = new Size(168, 32);
             btnSalvar.TabIndex = 1;
-            btnSalvar.Text = "Salvar";
+            btnSalvar.Text = "Emprestimo Novo";
             btnSalvar.Click += btnSalvar_Click;
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(txtPesquisar);
             guna2Panel1.CustomizableEdges = customizableEdges11;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
@@ -298,6 +306,17 @@
             txtPesquisar.TabIndex = 12;
             txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(240, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(216, 50);
+            guna2HtmlLabel1.TabIndex = 18;
+            guna2HtmlLabel1.Text = "Emprestimo";
+            // 
             // frmEmprestimo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -313,6 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
             guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -326,5 +346,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvEmprestimos;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

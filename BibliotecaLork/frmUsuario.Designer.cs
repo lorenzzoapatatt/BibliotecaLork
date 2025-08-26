@@ -52,6 +52,7 @@
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             gbUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
@@ -85,6 +86,7 @@
             // guna2Panel1
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(txtPesquisar);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
@@ -238,6 +240,17 @@
             btnSalvar.Text = "Salvar";
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(240, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(157, 50);
+            guna2HtmlLabel1.TabIndex = 15;
+            guna2HtmlLabel1.Text = "Usuários";
+            // 
             // frmUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -249,6 +262,7 @@
             Text = "frmUsuario";
             Load += frmUsuario_Load;
             guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             gbUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).EndInit();
             ResumeLayout(false);
@@ -263,5 +277,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEditar;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvUsuario;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

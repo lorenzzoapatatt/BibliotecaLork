@@ -58,5 +58,10 @@ namespace BibliotecaLork
             BuscarEmprestimo();
             BuscarLivro();
         }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

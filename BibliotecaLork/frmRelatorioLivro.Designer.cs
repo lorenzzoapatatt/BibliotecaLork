@@ -48,6 +48,7 @@
             dgvRelatorioLivro = new Guna.UI2.WinForms.Guna2DataGridView();
             txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gbRelatorioLivro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRelatorio).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).BeginInit();
@@ -209,9 +210,11 @@
             txtPesquisar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtPesquisar.Size = new Size(208, 32);
             txtPesquisar.TabIndex = 12;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(txtPesquisar);
             guna2Panel1.CustomizableEdges = customizableEdges5;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
@@ -220,6 +223,17 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 18;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(240, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(357, 50);
+            guna2HtmlLabel1.TabIndex = 13;
+            guna2HtmlLabel1.Text = "Relatório dos Livros";
             // 
             // frmRelatorioLivro
             // 
@@ -235,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvRelatorio).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvRelatorioLivro).EndInit();
             guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -245,5 +260,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvRelatorioLivro;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
