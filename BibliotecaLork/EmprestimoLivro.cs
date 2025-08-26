@@ -14,8 +14,8 @@ namespace BibliotecaLork
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
         public int Id { get; set; }
-        public string DataEmprestimo { get; set; }
-        public string DataDevolucao { get; set; }
+        public DateTime DataEmprestimo { get; set; }
+        public DateTime DataDevolucao { get; set; }
         public string Status { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuario { get; set; }

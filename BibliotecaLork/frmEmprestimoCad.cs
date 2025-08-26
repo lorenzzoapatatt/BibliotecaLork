@@ -85,8 +85,8 @@ namespace BibliotecaLork
             {
                 var emprestimoLivro = new EmprestimoLivro
                 {
-                    DataEmprestimo = txtDataEmprestimo.Text,
-                    DataDevolucao = txtDataDevolucao.Text,
+                    DataEmprestimo = DateTime.Parse(txtDataEmprestimo.Text),
+                    DataDevolucao = DateTime.Parse(txtDataDevolucao.Text),
                     Status = txtStatus.Text,
                     UsuarioId = (int)cbUsuario.SelectedValue,
                     LivroId = (int)cbLivro.SelectedValue
@@ -107,8 +107,8 @@ namespace BibliotecaLork
             using (var bd = new LivrosDBContext())
             {
                 var entidade = bd.EmprestimoLivros.FirstOrDefault(e => e.Id == _emprestimoLivro!.Id);
-                entidade.DataEmprestimo = txtDataEmprestimo.Text;
-                entidade.DataDevolucao = txtDataDevolucao.Text;
+                entidade.DataEmprestimo = DateTime.Parse(txtDataEmprestimo.Text);
+                entidade.DataDevolucao = DateTime.Parse(txtDataDevolucao.Text);
                 entidade.Status = txtStatus.Text;
                 bd.EmprestimoLivros.Update(entidade);
                 bd.SaveChanges();

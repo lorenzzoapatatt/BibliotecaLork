@@ -307,6 +307,7 @@
             Controls.Add(guna2Panel1);
             Name = "frmEmprestimo";
             Text = "frmEmprestimo";
+            Activated += frmEmprestimo_Activated;
             Load += frmEmprestimo_Load;
             gbEmprestimos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).EndInit();

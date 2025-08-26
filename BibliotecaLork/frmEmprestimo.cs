@@ -18,22 +18,44 @@ namespace BibliotecaLork
         {
             InitializeComponent();
         }
-
+        private void frmEmprestimo_Load(object sender, EventArgs e)
+        {
+            BuscarEmprestimo();
+        }
+        private void frmEmprestimo_Activated(object sender, EventArgs e)
+        {
+            BuscarEmprestimo();
+        }
         private void BuscarEmprestimo()
         {
             using (var bd = new LivrosDBContext())
             {
-                var emprestimoLivros = bd.EmprestimoLivros.ToList();
-                dgvEmprestimos.DataSource = emprestimoLivros;
+
+                var consultaEmprestimos = (from empLiv in bd.EmprestimoLivros
+                                          join usuarios in bd.Usuarios on empLiv.UsuarioId equals usuarios.Id
+                                          join livro in bd.Livros on empLiv.LivroId equals livro.Id
+                                           select new {
+                                              empLiv,
+                                              usuarios,
+                                              livro
+                                          });
+
                 if (!string.IsNullOrEmpty(txtPesquisar.Text))
                 {
-                    emprestimoLivros = emprestimoLivros.Where(e => e.Status.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase)).ToList();
-                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
+                    consultaEmprestimos = consultaEmprestimos.Where(e => e.empLiv.Status.Contains(txtPesquisar.Text, StringComparison.OrdinalIgnoreCase));
                 }
-                else
+
+                var dadosEmprestimoLivro = consultaEmprestimos.Select(s => new
                 {
-                    dgvEmprestimos.DataSource = emprestimoLivros.ToList();
-                }
+                    Id = s.empLiv.Id,
+                    DataEmprestimo = s.empLiv.DataEmprestimo,
+                    DataDevolucao = s.empLiv.DataDevolucao,
+                    Status = s.empLiv.Status,
+                    Usuario = s.usuarios.Nome,
+                    Livro = s.livro.Titulo
+                });
+
+                dgvEmprestimos.DataSource = dadosEmprestimoLivro.ToList();
             }
         }
 
@@ -87,23 +109,19 @@ namespace BibliotecaLork
 
         private void dgvEmprestimos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (!dgvEmprestimos.Rows[e.RowIndex].IsNewRow)
+            if (e.RowIndex >= 0)
             {
-                var emprestimoSelecionado = dgvEmprestimos.Rows[e.RowIndex].DataBoundItem as EmprestimoLivro;
-                if (emprestimoSelecionado != null)
-                {
-                    emprestimoLivroSelecionado = emprestimoSelecionado;
-                }
+                emprestimoLivroSelecionado = dgvEmprestimos.Rows[e.RowIndex].DataBoundItem as EmprestimoLivro;
+                btnEditar.Enabled = true;
             }
         }
-        private void frmEmprestimo_Load(object sender, EventArgs e)
-        {
-            BuscarEmprestimo();
-        }
+
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
             BuscarEmprestimo();
         }
+
+        
     }
 }

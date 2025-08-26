@@ -39,22 +39,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             btnExcluir = new Guna.UI2.WinForms.Guna2Button();
-            txtDataEmprestimo = new Guna.UI2.WinForms.Guna2TextBox();
-            txtDataDevolucao = new Guna.UI2.WinForms.Guna2TextBox();
             txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             cbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
             cbLivro = new Guna.UI2.WinForms.Guna2ComboBox();
             gbEmprestimo = new Guna.UI2.WinForms.Guna2GroupBox();
+            txtDataDevolucao = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            txtDataEmprestimo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gbEmprestimo.SuspendLayout();
             SuspendLayout();
@@ -101,67 +101,13 @@
             btnExcluir.Text = "Cancelar";
             btnExcluir.Click += btnExcluir_Click;
             // 
-            // txtDataEmprestimo
-            // 
-            txtDataEmprestimo.BackColor = Color.WhiteSmoke;
-            txtDataEmprestimo.BorderColor = Color.FromArgb(193, 200, 207);
-            txtDataEmprestimo.BorderRadius = 5;
-            txtDataEmprestimo.BorderThickness = 0;
-            txtDataEmprestimo.CustomizableEdges = customizableEdges5;
-            txtDataEmprestimo.DefaultText = "";
-            txtDataEmprestimo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtDataEmprestimo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtDataEmprestimo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtDataEmprestimo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtDataEmprestimo.FillColor = Color.FromArgb(224, 224, 224);
-            txtDataEmprestimo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataEmprestimo.Font = new Font("Segoe UI", 9F);
-            txtDataEmprestimo.ForeColor = Color.Black;
-            txtDataEmprestimo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataEmprestimo.Location = new Point(16, 56);
-            txtDataEmprestimo.Margin = new Padding(4, 5, 4, 5);
-            txtDataEmprestimo.Name = "txtDataEmprestimo";
-            txtDataEmprestimo.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtDataEmprestimo.PlaceholderText = "Data do Emprestimo";
-            txtDataEmprestimo.SelectedText = "";
-            txtDataEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtDataEmprestimo.Size = new Size(448, 45);
-            txtDataEmprestimo.TabIndex = 4;
-            // 
-            // txtDataDevolucao
-            // 
-            txtDataDevolucao.BackColor = Color.WhiteSmoke;
-            txtDataDevolucao.BorderColor = Color.FromArgb(193, 200, 207);
-            txtDataDevolucao.BorderRadius = 5;
-            txtDataDevolucao.BorderThickness = 0;
-            txtDataDevolucao.CustomizableEdges = customizableEdges7;
-            txtDataDevolucao.DefaultText = "";
-            txtDataDevolucao.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtDataDevolucao.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtDataDevolucao.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtDataDevolucao.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtDataDevolucao.FillColor = Color.FromArgb(224, 224, 224);
-            txtDataDevolucao.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataDevolucao.Font = new Font("Segoe UI", 9F);
-            txtDataDevolucao.ForeColor = Color.Black;
-            txtDataDevolucao.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDataDevolucao.Location = new Point(16, 120);
-            txtDataDevolucao.Margin = new Padding(4, 5, 4, 5);
-            txtDataDevolucao.Name = "txtDataDevolucao";
-            txtDataDevolucao.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtDataDevolucao.PlaceholderText = "Data da devolução";
-            txtDataDevolucao.SelectedText = "";
-            txtDataDevolucao.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtDataDevolucao.Size = new Size(448, 45);
-            txtDataDevolucao.TabIndex = 5;
-            // 
             // txtStatus
             // 
             txtStatus.BackColor = Color.WhiteSmoke;
             txtStatus.BorderColor = Color.FromArgb(193, 200, 207);
             txtStatus.BorderRadius = 5;
             txtStatus.BorderThickness = 0;
-            txtStatus.CustomizableEdges = customizableEdges9;
+            txtStatus.CustomizableEdges = customizableEdges5;
             txtStatus.DefaultText = "";
             txtStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -178,14 +124,14 @@
             txtStatus.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
             txtStatus.PlaceholderText = "Status";
             txtStatus.SelectedText = "";
-            txtStatus.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtStatus.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtStatus.Size = new Size(448, 45);
             txtStatus.TabIndex = 6;
             // 
             // cbUsuario
             // 
             cbUsuario.BackColor = Color.Transparent;
-            cbUsuario.CustomizableEdges = customizableEdges11;
+            cbUsuario.CustomizableEdges = customizableEdges7;
             cbUsuario.DrawMode = DrawMode.OwnerDrawFixed;
             cbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
             cbUsuario.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -195,14 +141,14 @@
             cbUsuario.ItemHeight = 30;
             cbUsuario.Location = new Point(528, 56);
             cbUsuario.Name = "cbUsuario";
-            cbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cbUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cbUsuario.Size = new Size(320, 36);
             cbUsuario.TabIndex = 7;
             // 
             // cbLivro
             // 
             cbLivro.BackColor = Color.Transparent;
-            cbLivro.CustomizableEdges = customizableEdges13;
+            cbLivro.CustomizableEdges = customizableEdges9;
             cbLivro.DrawMode = DrawMode.OwnerDrawFixed;
             cbLivro.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLivro.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -212,17 +158,17 @@
             cbLivro.ItemHeight = 30;
             cbLivro.Location = new Point(528, 112);
             cbLivro.Name = "cbLivro";
-            cbLivro.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cbLivro.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cbLivro.Size = new Size(320, 36);
             cbLivro.TabIndex = 8;
             // 
             // gbEmprestimo
             // 
+            gbEmprestimo.Controls.Add(txtDataDevolucao);
+            gbEmprestimo.Controls.Add(txtDataEmprestimo);
             gbEmprestimo.Controls.Add(cbLivro);
             gbEmprestimo.Controls.Add(cbUsuario);
             gbEmprestimo.Controls.Add(txtStatus);
-            gbEmprestimo.Controls.Add(txtDataDevolucao);
-            gbEmprestimo.Controls.Add(txtDataEmprestimo);
             gbEmprestimo.Controls.Add(btnExcluir);
             gbEmprestimo.Controls.Add(btnSalvar);
             gbEmprestimo.CustomizableEdges = customizableEdges15;
@@ -234,6 +180,46 @@
             gbEmprestimo.Size = new Size(880, 368);
             gbEmprestimo.TabIndex = 17;
             gbEmprestimo.Text = "Emprestimo";
+            // 
+            // txtDataDevolucao
+            // 
+            txtDataDevolucao.BackColor = Color.WhiteSmoke;
+            txtDataDevolucao.BorderColor = Color.FromArgb(193, 200, 207);
+            txtDataDevolucao.BorderRadius = 5;
+            txtDataDevolucao.Checked = true;
+            txtDataDevolucao.CustomizableEdges = customizableEdges11;
+            txtDataDevolucao.FillColor = Color.White;
+            txtDataDevolucao.Font = new Font("Segoe UI", 9F);
+            txtDataDevolucao.ForeColor = Color.FromArgb(117, 117, 117);
+            txtDataDevolucao.Format = DateTimePickerFormat.Long;
+            txtDataDevolucao.Location = new Point(16, 120);
+            txtDataDevolucao.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            txtDataDevolucao.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            txtDataDevolucao.Name = "txtDataDevolucao";
+            txtDataDevolucao.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtDataDevolucao.Size = new Size(448, 48);
+            txtDataDevolucao.TabIndex = 10;
+            txtDataDevolucao.Value = new DateTime(2025, 8, 25, 20, 32, 38, 318);
+            // 
+            // txtDataEmprestimo
+            // 
+            txtDataEmprestimo.BackColor = Color.White;
+            txtDataEmprestimo.BorderColor = Color.FromArgb(193, 200, 207);
+            txtDataEmprestimo.BorderRadius = 5;
+            txtDataEmprestimo.Checked = true;
+            txtDataEmprestimo.CustomizableEdges = customizableEdges13;
+            txtDataEmprestimo.FillColor = Color.White;
+            txtDataEmprestimo.Font = new Font("Segoe UI", 9F);
+            txtDataEmprestimo.ForeColor = Color.FromArgb(117, 117, 117);
+            txtDataEmprestimo.Format = DateTimePickerFormat.Long;
+            txtDataEmprestimo.Location = new Point(16, 56);
+            txtDataEmprestimo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            txtDataEmprestimo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            txtDataEmprestimo.Name = "txtDataEmprestimo";
+            txtDataEmprestimo.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtDataEmprestimo.Size = new Size(448, 48);
+            txtDataEmprestimo.TabIndex = 9;
+            txtDataEmprestimo.Value = new DateTime(2025, 8, 25, 20, 32, 8, 32);
             // 
             // guna2Panel1
             // 
@@ -263,12 +249,12 @@
 
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2Button btnExcluir;
-        private Guna.UI2.WinForms.Guna2TextBox txtDataEmprestimo;
-        private Guna.UI2.WinForms.Guna2TextBox txtDataDevolucao;
         private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2ComboBox cbUsuario;
         private Guna.UI2.WinForms.Guna2ComboBox cbLivro;
         private Guna.UI2.WinForms.Guna2GroupBox gbEmprestimo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDataEmprestimo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtDataDevolucao;
     }
 }

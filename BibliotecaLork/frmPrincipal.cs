@@ -23,7 +23,10 @@ namespace BibliotecaLork
         {
             BuscarLivro();
         }
-
+        private void frmPrincipal_Activated(object sender, EventArgs e)
+        {
+            BuscarLivro();
+        }
         private void BuscarLivro()
         {
             using (var bd = new LivrosDBContext())
@@ -39,6 +42,23 @@ namespace BibliotecaLork
                 {
                     dgvLivros.DataSource = livros.ToList();
                 }
+            }
+        }
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
+            msg.Icon = MessageDialogIcon.Information;
+
+            if (LivroSelecionado != null)
+            {
+                var livroEditar = new frmCadastroLivro(LivroSelecionado);
+                livroEditar.Show();
+                BuscarLivro();
+                LivroSelecionado = null;
+            }
+            else
+            {
+                msg.Show("Selecione um cardápio para editar.");
             }
         }
 
@@ -72,25 +92,9 @@ namespace BibliotecaLork
                 btnEditar.Enabled = true;
             }
         }
-
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
-            var msg = new Guna.UI2.WinForms.Guna2MessageDialog();
-            msg.Icon = MessageDialogIcon.Information;
-
-            if (LivroSelecionado != null)
-            {
-                //abrir o formulario de edição
-                var livroEditar = new frmCadastroLivro(LivroSelecionado);
-                livroEditar.Show();
-                //atualizar a lista de cardapios
-                BuscarLivro();
-                LivroSelecionado = null;
-            }
-            else
-            {
-                msg.Show("Selecione um cardápio para editar.");
-            }
+            BuscarLivro();
         }
 
         private void btnCadastroLivros_Click(object sender, EventArgs e)
@@ -124,10 +128,7 @@ namespace BibliotecaLork
             frmLogin.ShowDialog();
         }
 
-        private void frmPrincipal_Activated(object sender, EventArgs e)
-        {
-            BuscarLivro();
-        }
+        
 
         private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -135,9 +136,6 @@ namespace BibliotecaLork
             frmLogin.Show();
         }
 
-        private void txtPesquisar_TextChanged(object sender, EventArgs e)
-        {
-            BuscarLivro();
-        }
+        
     }
 }
