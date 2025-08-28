@@ -299,7 +299,7 @@
             Controls.Add(txtPesquisar);
             Controls.Add(gbPrincipal);
             Name = "frmPrincipal";
-            Text = "frmPrincipal";
+            Text = "Principal";
             Activated += frmPrincipal_Activated;
             FormClosed += frmPrincipal_FormClosed;
             Load += frmPrincipal_Load;

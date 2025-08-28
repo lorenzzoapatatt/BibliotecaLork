@@ -248,7 +248,7 @@
             Controls.Add(gbEmprestimo);
             Controls.Add(guna2Panel1);
             Name = "frmEmprestimoCad";
-            Text = "frmEmprestimoCad";
+            Text = "EmprestimoCad";
             Load += frmEmprestimoCad_Load;
             gbEmprestimo.ResumeLayout(false);
             ResumeLayout(false);

@@ -259,7 +259,7 @@
             Controls.Add(gbUsuario);
             Controls.Add(guna2Panel1);
             Name = "frmUsuario";
-            Text = "frmUsuario";
+            Text = "Usuario";
             Load += frmUsuario_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

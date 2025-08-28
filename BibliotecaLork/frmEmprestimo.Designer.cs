@@ -56,8 +56,8 @@
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
             btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             gbEmprestimos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
@@ -281,6 +281,17 @@
             guna2Panel1.Size = new Size(944, 80);
             guna2Panel1.TabIndex = 16;
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
+            guna2HtmlLabel1.Location = new Point(240, 16);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(216, 50);
+            guna2HtmlLabel1.TabIndex = 18;
+            guna2HtmlLabel1.Text = "Emprestimo";
+            // 
             // txtPesquisar
             // 
             txtPesquisar.BackColor = Color.FromArgb(25, 118, 210);
@@ -306,17 +317,6 @@
             txtPesquisar.TabIndex = 12;
             txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.WhiteSmoke;
-            guna2HtmlLabel1.Location = new Point(240, 16);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(216, 50);
-            guna2HtmlLabel1.TabIndex = 18;
-            guna2HtmlLabel1.Text = "Emprestimo";
-            // 
             // frmEmprestimo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -325,7 +325,7 @@
             Controls.Add(gbEmprestimos);
             Controls.Add(guna2Panel1);
             Name = "frmEmprestimo";
-            Text = "frmEmprestimo";
+            Text = "Emprestimo";
             Activated += frmEmprestimo_Activated;
             Load += frmEmprestimo_Load;
             gbEmprestimos.ResumeLayout(false);

@@ -328,7 +328,7 @@
             Controls.Add(gbFormulario);
             Controls.Add(guna2Panel1);
             Name = "frmCadastroLivro";
-            Text = "frmCadastroLivro";
+            Text = "CadastroLivro";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             gbFormulario.ResumeLayout(false);

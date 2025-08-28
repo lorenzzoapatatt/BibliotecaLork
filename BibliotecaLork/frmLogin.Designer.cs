@@ -44,7 +44,6 @@
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             btnEsqueceuSenha = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -71,7 +70,7 @@
             txtLogin.Margin = new Padding(4, 5, 4, 5);
             txtLogin.Name = "txtLogin";
             txtLogin.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtLogin.PlaceholderText = "Bote seu email";
+            txtLogin.PlaceholderText = "Email";
             txtLogin.SelectedText = "";
             txtLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtLogin.Size = new Size(448, 45);
@@ -99,7 +98,7 @@
             txtSenha.Margin = new Padding(4, 5, 4, 5);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtSenha.PlaceholderText = "Bote sua senha";
+            txtSenha.PlaceholderText = "Senha";
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSenha.Size = new Size(448, 45);
@@ -164,7 +163,6 @@
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2Panel1.BorderRadius = 20;
-            guna2Panel1.Controls.Add(guna2HtmlLabel3);
             guna2Panel1.Controls.Add(guna2HtmlLabel2);
             guna2Panel1.CustomizableEdges = customizableEdges9;
             guna2Panel1.FillColor = Color.FromArgb(25, 118, 210);
@@ -174,27 +172,16 @@
             guna2Panel1.Size = new Size(325, 505);
             guna2Panel1.TabIndex = 10;
             // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.ForeColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(96, 216);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(137, 32);
-            guna2HtmlLabel3.TabIndex = 12;
-            guna2HtmlLabel3.Text = "Sla n sei ta lk";
-            // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(112, 160);
+            guna2HtmlLabel2.Location = new Point(80, 187);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(101, 50);
+            guna2HtmlLabel2.Size = new Size(169, 50);
             guna2HtmlLabel2.TabIndex = 11;
-            guna2HtmlLabel2.Text = "Ajuda";
+            guna2HtmlLabel2.Text = "Biblioteca";
             // 
             // frmLogin
             // 
@@ -209,7 +196,7 @@
             Controls.Add(txtSenha);
             Controls.Add(txtLogin);
             Name = "frmLogin";
-            Text = "frmLogin";
+            Text = "Login";
             FormClosed += frmLogin_FormClosed;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
@@ -224,7 +211,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button btnEsqueceuSenha;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
