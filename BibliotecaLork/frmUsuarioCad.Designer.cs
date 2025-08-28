@@ -133,7 +133,7 @@
             txtUsuario.Margin = new Padding(4, 5, 4, 5);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtUsuario.PlaceholderText = "Nome do Usuário";
+            txtUsuario.PlaceholderText = "Nome de usuario";
             txtUsuario.SelectedText = "";
             txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtUsuario.Size = new Size(448, 45);
@@ -161,7 +161,7 @@
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtEmail.PlaceholderText = "Bote seu email";
+            txtEmail.PlaceholderText = "Insira seu email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtEmail.Size = new Size(448, 45);
@@ -189,7 +189,7 @@
             txtSenha.Margin = new Padding(4, 5, 4, 5);
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtSenha.PlaceholderText = "Bote sua Senha";
+            txtSenha.PlaceholderText = "Insira sua senha";
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtSenha.Size = new Size(448, 45);
@@ -217,7 +217,7 @@
             txtConfirmarSenha.Margin = new Padding(4, 5, 4, 5);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
             txtConfirmarSenha.PlaceholderForeColor = Color.FromArgb(117, 117, 117);
-            txtConfirmarSenha.PlaceholderText = "Confirmar Senha";
+            txtConfirmarSenha.PlaceholderText = "Confirme sua senha";
             txtConfirmarSenha.SelectedText = "";
             txtConfirmarSenha.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtConfirmarSenha.Size = new Size(448, 45);
